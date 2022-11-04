@@ -60,6 +60,7 @@ input::placeholder {
   background-color: #FF79DA;
   margin: auto;
   padding: 0 23px 0 31px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .btn__element {
