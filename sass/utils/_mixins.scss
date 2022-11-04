@@ -1,0 +1,102 @@
+@use "../utils/variables" as *;
+
+// media queries
+
+@mixin tablette {
+    @media screen and (min-width: map-get($breakpoints, tablette)){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content; 
+    }
+}
+// mixin btn-before
+@mixin btn-before ($content,$mrg-right) {
+    font-family: FontAwesome;
+    color:$color-footer;
+    font-size: 13px;
+    content: $content;
+    margin-right:$mrg-right;
+}
+
+@mixin heart($font-weight)
+{
+    font-family: "Font Awesome 5 Free";
+    content: "\f004";
+    font-weight: $font-weight;   
+    font-size: 1.6rem;
+    position: absolute;
+    top: 19px;
+    right: 28px;
+}
+
+@mixin width-height($width,$height)
+{
+    width: $width;
+    height: $height;
+}
+
+@mixin color-button($bk-color,$border-width,$border-style,$border-color)
+{
+    background-color:$bk-color;
+    border-top: $border-width $border-style $border-color;
+    border-right: $border-width $border-style $border-color;
+    border-bottom: $border-width $border-style $border-color;
+}
+@mixin format-icon-functioning($padding-left,$padding-right)
+{
+    @extend .functioning__column__button__icon;
+    padding-right:$padding-right;
+    padding-left:$padding-left;
+}
+
+@mixin flex-justify-content-align-items($display,$justify-content,$align-items)
+{
+    display: $display;
+    justify-content: $justify-content; 
+    align-items: $align-items;   
+}
+
+@mixin flex-flex-direction-align-items($display,$flex-direction,$align-items)
+{
+    display: $display;
+    flex-direction: $flex-direction; 
+    align-items: $align-items;    
+}
+
+@mixin flex-justify-content-flex-direction($display,$justify-content,$flex-direction)
+{
+    display: $display;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+@mixin flex-justify-content-flex-direction-align-items($display,$justify-content,$flex-direction,$align-items)
+{
+    display: $display;
+    flex-direction:$flex-direction ;
+    justify-content:$justify-content ;
+    align-items: $align-items;
+}
+
+@mixin height-width($height,$width)
+{
+    height:$height;
+    width:$width;
+}
+
+@mixin font-size-font-weight($font-size,$font-weight)
+{
+    font-size:$font-size;
+    font-weight:$font-weight;
+}
+
+@mixin title_format($overflow,$white-space,$text-overflow)
+{
+    overflow: $overflow;
+    white-space: $white-space;
+    text-overflow: $text-overflow;
+}

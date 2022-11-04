@@ -1,0 +1,17 @@
+@use "./../utils/variables" as *;
+@use "./../utils/mixins" as m;
+
+.container
+{
+        max-width:1500px;
+        width:100%;
+        margin:auto;
+
+	// @include m.tablette{	
+    //     width:98%;
+    //     margin:auto;
+    // }
+    // @include m.desktop{	
+    //     width:100%;
+    // }
+}

@@ -1,0 +1,141 @@
+@use "./../utils/variables" as *;
+@use "./../utils/mixins" as m;
+
+.header
+  {
+    margin-bottom:47px;
+    &__logo
+      {
+        @include m.height-width(auto,100%);
+        padding: 23px 0 15px 0;
+        text-align: center;
+        box-shadow: 0px 2px 8px $color-shadow-dark;
+          &__img{
+            height: 31px;
+            @include m.tablette
+            {height:45px;}
+
+            @include m.desktop
+            {height:60px;}
+          }
+      }
+    &__search
+      {
+        @include m.flex-justify-content-flex-direction-align-items(flex,center,column,center);
+        @include m.height-width(auto,100%);
+        padding-bottom: 67px;
+        background-color: $color-header;
+        @include m.tablette
+        {padding-bottom:50px;}
+
+        @include m.desktop
+        {padding-bottom:60px;}
+      
+        p{
+          @include m.flex-justify-content-flex-direction-align-items(flex,center,row,center);
+          @include m.height-width(auto,100%);
+          background-color:$color-bk-header;
+        }
+        h1 {
+          @include m.height-width(auto,78%);
+          @include m.font-size-font-weight(27px,bolder);
+          text-align: center;
+          margin: 0px auto -3px 37px;
+          @include m.tablette
+          {
+            font-size: 35px;
+            margin:0px auto -3px auto;
+          }
+        }
+
+        h2{
+          @include m.height-width(auto,102%);
+          padding-top: 0;
+          @include m.font-size-font-weight(20px,300);
+          text-align: center;
+          margin: 15px auto 33px auto;
+          @include m.tablette
+          {
+          font-size: 25px;
+          }
+        }
+
+      &__area{
+         @include m.flex-justify-content-flex-direction-align-items(flex,center,row,center);
+          flex-wrap: wrap;
+          @include m.height-width(auto,100%);
+          background-color: $color-bk-header;
+          margin-bottom: 43px;
+
+          &__icon{
+            font-size: 19px;
+            margin-left: -10px;
+            @include m.tablette
+            {
+              font-size: 25px;
+              margin-left: 90px;
+            }
+          }
+
+          &__input{
+            @include m.height-width(50px,160px);
+            padding-left: 17px;
+            background-color: #EAEAEA;
+            border: none;
+            color: #4a4a4a;
+            text-align: left;
+            @include m.font-size-font-weight(17px,bold);
+            @include m.tablette
+            {
+              font-size:20px;
+              width: 250px;
+            }
+
+            @include m.desktop
+            {
+              font-size:30px;
+              width: 350px;
+            }
+          }
+        }
+      }
+// les menus //
+&__menu
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0;
+  max-width: 1500px;
+  margin: 0 auto 0 auto;
+  &__logo{
+    @extend .header__logo;
+    padding-bottom:32px;
+    & img
+    {
+        @extend .header__logo__img ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include m.desktop
+        {height: 50px}
+    }
+  }
+}
+
+
+&__menu__arrow
+{
+    position: absolute;
+    left: 6%;
+    top: 11px;
+    font-size: 23px;
+    font-weight: bold;
+    @include m.desktop
+    {font-size: 30px;}
+}
+  }
+
+
