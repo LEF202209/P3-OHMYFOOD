@@ -58,6 +58,7 @@
             align-items:center;
             height:600px;
             width:32%;
+            margin-top:0;
         }
     }
     &__dishes
@@ -175,6 +176,7 @@
 // }
 
 
+
 .menu__block__details__card
 {
   display: flex;
@@ -221,7 +223,8 @@
     }
   }
   &__titles
-  {width:80%;
+  {
+    width:80%;
     &__title
       {
         margin: 0;
