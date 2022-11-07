@@ -221,12 +221,11 @@ input::placeholder {
     width: 350px;
   }
 }
-.header__menu {
+.header__menu, .header__menu--palette {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 0;
   max-width: 1500px;
   margin: 0 auto 0 auto;
 }
@@ -255,6 +254,10 @@ input::placeholder {
   .header__menu__arrow {
     font-size: 30px;
   }
+}
+
+.header__menu--palette {
+  margin-top: 12px;
 }
 
 .footer__nav {
