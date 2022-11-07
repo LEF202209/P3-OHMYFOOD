@@ -641,19 +641,19 @@ input::placeholder {
     padding: 11px 15px 95px 15px;
   }
 }
-.menu__block__column {
+.menu__block__column, .menu__block__column--delice {
   display: flex;
   flex-direction: column;
   margin-bottom: 31px;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__column {
+  .menu__block__column, .menu__block__column--delice {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 50px;
   }
 }
-.menu__block__details, .menu__block__desserts--note, .menu__block__details--note, .menu__block__details--delice, .menu__block__dishes, .menu__block__dishes--note {
+.menu__block__details, .menu__block__desserts--note, .menu__block__details--note, .menu__block__details--delice, .menu__block__dishes--delice, .menu__block__dishes, .menu__block__dishes--note {
   display: flex;
   flex-direction: column;
   max-width: 540px;
@@ -662,12 +662,12 @@ input::placeholder {
   margin-bottom: 14px;
 }
 @media screen and (min-width: 768px) {
-  .menu__block__details, .menu__block__desserts--note, .menu__block__details--note, .menu__block__details--delice, .menu__block__dishes, .menu__block__dishes--note {
+  .menu__block__details, .menu__block__desserts--note, .menu__block__details--note, .menu__block__details--delice, .menu__block__dishes--delice, .menu__block__dishes, .menu__block__dishes--note {
     margin: auto;
   }
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details, .menu__block__desserts--note, .menu__block__details--note, .menu__block__details--delice, .menu__block__dishes, .menu__block__dishes--note {
+  .menu__block__details, .menu__block__desserts--note, .menu__block__details--note, .menu__block__details--delice, .menu__block__dishes--delice, .menu__block__dishes, .menu__block__dishes--note {
     padding-bottom: 35px;
     justify-content: flex-start;
     align-content: center;
@@ -704,8 +704,8 @@ input::placeholder {
   font-weight: 400;
   font-size: 1.6rem;
   position: absolute;
-  right: 40px;
-  top: 43px;
+  right: 42px;
+  top: 42px;
 }
 .menu__block__title span::after {
   font-family: "Font Awesome 5 Free";
@@ -718,8 +718,8 @@ input::placeholder {
   color: transparent;
   transform: scale(0);
   position: absolute;
-  right: 40px;
-  top: 43px;
+  right: 42px;
+  top: 42px;
 }
 .menu__block__title span:hover::after {
   transition: all ease 0.8s;
@@ -745,16 +745,16 @@ input::placeholder {
   font-size: 191%;
 }
 
-.menu__block__details__title, .menu__block__desserts__title {
+.menu__block__details__title, .menu__block__details__title--delice, .menu__block__dishes__title--delice, .menu__block__desserts__title {
   font-size: 17.5px;
-  margin-left: 11px;
+  margin-left: 9px;
   margin-bottom: 14px;
   padding: 0px 0 5px 0;
   border-bottom: 4px solid #99E2D0;
   width: 44px;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details__title, .menu__block__desserts__title {
+  .menu__block__details__title, .menu__block__details__title--delice, .menu__block__dishes__title--delice, .menu__block__desserts__title {
     font-size: 21.5px;
     margin-left: 0;
     margin-bottom: 33px;
@@ -771,7 +771,7 @@ input::placeholder {
   }
 }
 
-.menu__block__details__card, .menu__block__details__card--note, .menu__block__details__card--delice, .menu__block__dishes__card, .menu__block__details__card__millefeuille, .menu__block__details__card__fondant, .menu__block__details__card__petales {
+.menu__block__details__card, .menu__block__desserts__card--delice, .menu__block__details__card--note, .menu__block__details__card--delice, .menu__block__dishes__card--delice, .menu__block__dishes__card, .menu__block__details__card__millefeuille, .menu__block__details__card__fondant, .menu__block__details__card__petales {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -787,7 +787,7 @@ input::placeholder {
   padding: 13px 13px 0 14px;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details__card, .menu__block__details__card--note, .menu__block__details__card--delice, .menu__block__dishes__card, .menu__block__details__card__millefeuille, .menu__block__details__card__fondant, .menu__block__details__card__petales {
+  .menu__block__details__card, .menu__block__desserts__card--delice, .menu__block__details__card--note, .menu__block__details__card--delice, .menu__block__dishes__card--delice, .menu__block__dishes__card, .menu__block__details__card__millefeuille, .menu__block__details__card__fondant, .menu__block__details__card__petales {
     margin-bottom: 35px;
   }
 }
@@ -845,7 +845,7 @@ input::placeholder {
     text-overflow: ellipsis;
   }
 }
-.menu__block__details__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle, .menu__block__details__card__titles__subtitle--pigeonneau {
+.menu__block__details__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice, .menu__block__details__card__titles__subtitle--pigeonneau {
   margin: 5px 0 14px 0;
   font-size: 103%;
   overflow: hidden;
@@ -853,7 +853,7 @@ input::placeholder {
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle, .menu__block__details__card__titles__subtitle--pigeonneau {
+  .menu__block__details__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice, .menu__block__details__card__titles__subtitle--pigeonneau {
     font-size: 95%;
   }
 }
@@ -870,13 +870,17 @@ input::placeholder {
   }
 }
 
-.menu__block__desserts__card__titles__subtitle {
+.menu__block__dishes--delice {
+  margin-bottom: 10px;
+}
+
+.menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice {
   font-size: 109%;
   font-weight: bold;
   width: 80%;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__desserts__card__titles__subtitle {
+  .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice {
     font-size: 95%;
     width: 80%;
   }
@@ -899,7 +903,7 @@ input::placeholder {
 }
 
 .menu__block__details--delice {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .menu__block__details--note {
@@ -908,6 +912,23 @@ input::placeholder {
 
 .menu__block__dishes--note {
   margin-bottom: 15px;
+}
+.menu__block__dishes__title--delice {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__dishes__title--delice {
+    margin-bottom: 33px;
+  }
+}
+
+.menu__block__dishes__card--delice {
+  margin-bottom: 17px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__dishes__card--delice {
+    margin-bottom: 35px;
+  }
 }
 
 .menu__block__desserts--note {
@@ -919,7 +940,7 @@ input::placeholder {
 }
 
 .menu__block__details__card--delice {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card--delice {
@@ -937,12 +958,43 @@ input::placeholder {
 }
 
 .menu__block--delice {
-  padding-bottom: 72px;
-  margin-top: -63px;
+  padding-bottom: 70px;
+  margin-top: -65px;
 }
 
 .menu__block--palette {
   padding-bottom: 65px;
+}
+
+.menu__block__desserts__card--delice {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__desserts__card--delice {
+    margin-bottom: 35px;
+  }
+}
+
+.menu__block__desserts__card__titles__subtitle--delice {
+  font-size: 100%;
+}
+
+.menu__block__column--delice {
+  margin-bottom: 23px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__column--delice {
+    margin-bottom: 50px;
+  }
+}
+
+.menu__block__details__title--delice {
+  margin-bottom: 18px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__details__title--delice {
+    margin-bottom: 33px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

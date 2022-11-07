@@ -90,8 +90,8 @@
             font-weight: 400;
             font-size: 1.6rem;
             position: absolute;
-            right: 40px;
-            top: 43px;
+            right: 42px;
+            top: 42px;
         }
         & span::after
         {
@@ -105,8 +105,8 @@
             color: transparent;
             transform: scale(0);
             position: absolute;
-            right: 40px;
-            top:43px;
+            right: 42px;
+            top:42px;
         }
         & span:hover::after 
         {
@@ -138,12 +138,11 @@
   }
 }
 
-// a revoir //
 
 .menu__block__details__title
 {
   font-size: 17.5px;
-  margin-left: 11px;
+  margin-left: 9px;
   margin-bottom: 14px;
   padding: 0px 0 5px 0;
   border-bottom: 4px solid $color-tertiary;
@@ -282,6 +281,13 @@
   }
 }
 
+.menu__block__dishes--delice
+{
+  @extend .menu__block__details;
+  margin-bottom:10px ;
+}
+
+
 .menu__block__desserts__card__titles__subtitle
 { 
   @extend .menu__block__details__card__titles__subtitle;
@@ -316,7 +322,8 @@
 
 .menu__block__details--delice
 {@extend .menu__block__details;
-  margin-bottom:8px}
+  margin-bottom:6px;
+}
 
   .menu__block__details--note
 {@extend .menu__block__details;
@@ -325,7 +332,27 @@
 .menu__block__dishes--note
   {
     @extend .menu__block__dishes;
+    @include m.tablette;
       margin-bottom:15px;} 
+.menu__block__dishes__title--delice
+{
+  @extend .menu__block__details__title; 
+  margin-bottom:16px;
+  @include m.desktop
+  {
+    margin-bottom: 33px;
+  }
+}
+
+.menu__block__dishes__card--delice
+{
+  @extend .menu__block__details__card;
+  margin-bottom:17px; 
+  @include m.desktop
+  {
+    margin-bottom: 35px;
+  }
+}
 
 .menu__block__desserts--note
 {
@@ -336,6 +363,7 @@
   @extend .menu__block;
   padding-bottom:80px; 
 }
+// .menu__block--delice
 
 
 // .menu__block__details__card__titles__title--delice
@@ -351,7 +379,7 @@
 .menu__block__details__card--delice
 {
   @extend .menu__block__details__card;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   @include m.desktop
   {
     margin-bottom:35px;
@@ -370,42 +398,55 @@
 
 .menu__block--delice
 {@extend .menu__block;
-  padding-bottom:72px;
-  margin-top:-63px;
+  padding-bottom:70px;
+  margin-top:-65px;
 }
 
 .menu__block--palette
 {@extend .menu__block;
   padding-bottom:65px;
 }
-// .menu__block__details__card__titles__title--delice
-// {
-//   @extend .menu__block__details__card__titles__title;
-//   margin-bottom: 14px;
-// }
-  //
 
+.menu__block__desserts__card--delice
+{
+  @extend .menu__block__details__card;
+  margin-bottom: 16px;
+  @include m.desktop
+  {
+    margin-bottom: 35px;
+  }
+}
+  
 
+.menu__block__desserts__card__titles__subtitle--delice
+{
+  @extend .menu__block__desserts__card__titles__subtitle;
+  font-size:100%;
+}
 
 
 // .menu__block__dishes--delice
 // {@extend .menu__block__dishes;
 //   margin-bottom: 10px;}
 
-// .menu__block__column--delice
-// {@extend .menu__block__column;
-//   margin-bottom: 35px;}
+.menu__block__column--delice
+{@extend .menu__block__column;
+  margin-bottom: 23px;
+  @include m.desktop{
+   margin-bottom: 50px;
+  }
+}
 
 // .menu__block__desserts__title--delice
 // {@extend .menu__block__desserts__title;
 //   margin-bottom: 23px;}
 
-// .menu__block__details__title--delice
-// {@extend .menu__block__details__title;
-//   margin-bottom: 21px;
-//   @include m.desktop
-//   {margin-bottom: 33px;}
-// }
+.menu__block__details__title--delice
+{@extend .menu__block__details__title;
+  margin-bottom: 18px;
+  @include m.desktop
+  {margin-bottom: 33px;}
+}
 
 // .menu__block__details__card__petales--delice
 // {@extend .menu__block__details__card__petales;
