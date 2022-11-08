@@ -287,6 +287,12 @@
   margin-bottom:10px ;
 }
 
+.menu__block__dishes--palette
+{
+  @extend .menu__block__details;
+  margin-bottom:16px ;
+}
+
 
 .menu__block__desserts__card__titles__subtitle
 { 
@@ -436,6 +442,13 @@
    margin-bottom: 50px;
   }
 }
+.menu__block__column--palette
+{@extend .menu__block__column;
+  margin-bottom: 27px;
+  @include m.desktop{
+   margin-bottom: 50px;
+  }
+}
 
 // .menu__block__desserts__title--delice
 // {@extend .menu__block__desserts__title;
@@ -448,6 +461,22 @@
   {margin-bottom: 33px;}
 }
 
+.menu__block__details__card--palette
+{@extend .menu__block__details__card;
+  margin-bottom: 11px;
+  @include m.desktop
+  {margin-bottom: 33px;}
+}
+
+.menu__block__details--palette
+{
+@extend .menu__block__details;
+        margin-bottom:11px;
+        @include m.desktop
+        {
+            padding-bottom: 35px;
+        }
+}
 
 
 // .menu__block__details__card__petales--delice
@@ -457,10 +486,3 @@
 // .menu__block__details__card__titles__subtitle--delice
 // {@extend .menu__block__details__card__titles__subtitle;
 //   margin-bottom: 19px;}
-
-
-
-
-
-
-
