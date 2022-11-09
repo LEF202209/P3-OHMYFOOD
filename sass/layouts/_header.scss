@@ -106,19 +106,18 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 0;
   max-width: 1500px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 0 auto;height:70px;
   &__logo{
     @extend .header__logo;
-    padding-bottom:32px;
-    &__img
+    padding:0;
+    & img
     {
         @extend .header__logo__img ;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -35%);
         @include m.desktop
         {height: 50px}
     }
@@ -130,7 +129,7 @@
 {
     position: absolute;
     left: 6%;
-    top: 11px;
+    top: 24px;
     font-size: 23px;
     font-weight: bold;
     @include m.desktop
@@ -138,39 +137,10 @@
 }
   }
 
-  .header__menu__arrow--delice
-  {
-    @extend .header__menu__arrow;
-    left: 7%;
-    top: 24px;
-  }
-
-  .header__menu__arrow--palette
-  {
-    @extend .header__menu__arrow;
-    left: 6%;
-    top: 27px;
-  }
-
-  .header__menu__logo__img--delice
-  {
-    @extend .header__menu__logo__img;
-    margin-top:8px;
-  }
-
-  .header__menu__logo--delice
-  {
-    @extend .header__menu__logo;
-    padding-top:30px;
-    padding-bottom: 40px;
-  }
-
-  .header__menu__logo--palette
-  {
-    @extend .header__menu__logo;
-    padding-top: 27px;
-    padding-bottom: 43px;
-  }
-
+  .header__menu--palette
+{
+  @extend .header__menu;
+  margin-top:12px;
+}
 
 

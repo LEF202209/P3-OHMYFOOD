@@ -31,7 +31,7 @@
     {
         display:flex;
         flex-direction: column;
-        margin-bottom:31px;
+        margin-bottom:33px;
         @include m.desktop
         {
           flex-direction: row;
@@ -47,7 +47,7 @@
         max-width: 540px;
         margin: auto;
         width: 100%;
-        margin-bottom:14px;
+        margin-bottom:15px;
         @include m.tablette
         {margin: auto;}
         @include m.desktop
@@ -165,6 +165,15 @@
    } 
 }
 
+.menu__block__desserts__title--note
+{@extend .menu__block__details__title;
+  margin-bottom:14px;
+  @include m.desktop
+   {
+    margin-bottom:33px;
+   } 
+}
+
 // .menu__block__dishes__title, .menu__block__desserts__title
 // {
 //   @extend .menu__block__details__title;
@@ -189,7 +198,7 @@
   border-bottom: 2px solid #F6F6F6;
   border-radius: 15px;
   box-shadow: 0px 4px 15px lightgrey;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   padding:13px 13px 0 14px;
   @include m.desktop
   {
@@ -223,7 +232,7 @@
   }
   &__titles
   {
-    width:80%;
+    width:85%;
     &__title
       {
         margin: 0;
@@ -238,6 +247,9 @@
       {
         @extend .menu__block__details__card__titles__title;
         margin:-3px 0 4px 0;
+        @include m.desktop{
+          margin:0;
+        }
       } 
     &__title--delice
       {
@@ -265,7 +277,10 @@
     &__subtitle--pigeonneau
       {
         @extend .menu__block__details__card__titles__subtitle;
-        margin-bottom:13px; 
+        margin-bottom:13px;
+        @include m.desktop{
+          margin-bottom:14px
+        } 
       }   
 
 }
@@ -285,12 +300,6 @@
 {
   @extend .menu__block__details;
   margin-bottom:10px ;
-}
-
-.menu__block__dishes--palette
-{
-  @extend .menu__block__details;
-  margin-bottom:16px ;
 }
 
 
@@ -335,11 +344,22 @@
 {@extend .menu__block__details;
   margin-bottom:20px;}
 
+  .menu__block__details--palette
+  {@extend .menu__block__details;
+    margin-bottom:9px;}
+
 .menu__block__dishes--note
   {
     @extend .menu__block__dishes;
     @include m.tablette;
       margin-bottom:15px;} 
+
+      .menu__block__dishes--palette
+  {
+    @extend .menu__block__dishes;
+    @include m.tablette;
+      margin-bottom:15px;} 
+
 .menu__block__dishes__title--delice
 {
   @extend .menu__block__details__title; 
@@ -360,6 +380,15 @@
   }
 }
 
+.menu__block__dishes__card--palette
+{
+  @extend .menu__block__details__card;
+  margin-bottom:14px; 
+  @include m.desktop
+  {
+    margin-bottom: 35px;
+  }
+}
 .menu__block__desserts--note
 {
   @extend .menu__block__details;
@@ -368,19 +397,20 @@
 .menu__block--note{
   @extend .menu__block;
   padding-bottom:80px; 
+  margin-top:-70px;
 }
 // .menu__block--delice
 
 
-// .menu__block__details__card__titles__title--delice
-// {
-//   @extend .menu__block__details__card__titles__title;
-//   @include m.title_format(initial,normal,ellipsis);
-//   @include m.desktop
-//   {
-//     @include m.title_format(hidden,nowrap,ellipsis);
-//   }
-// }
+.menu__block__details__card__titles__title--palette
+{
+  @extend .menu__block__details__card__titles__title;
+  @include m.title_format(initial,nowrap,initial);
+  @include m.desktop
+  {
+    @include m.title_format(hidden,nowrap,ellipsis);
+  }
+}
 
 .menu__block__details__card--delice
 {
@@ -442,6 +472,15 @@
    margin-bottom: 50px;
   }
 }
+
+.menu__block__column--note
+{@extend .menu__block__column;
+  margin-bottom: 25px;
+  @include m.desktop{
+   margin-bottom: 50px;
+  }
+}
+
 .menu__block__column--palette
 {@extend .menu__block__column;
   margin-bottom: 27px;
@@ -460,29 +499,24 @@
   @include m.desktop
   {margin-bottom: 33px;}
 }
+// .menu__block__details__title--note
+// {@extend .menu__block__details__title;
+//   margin-bottom: 14px;
+//   @include m.desktop
+//   {margin-bottom: 33px;}
+// }
 
-.menu__block__details__card--palette
-{@extend .menu__block__details__card;
-  margin-bottom: 11px;
-  @include m.desktop
-  {margin-bottom: 33px;}
-}
-
-.menu__block__details--palette
-{
-@extend .menu__block__details;
-        margin-bottom:11px;
-        @include m.desktop
-        {
-            padding-bottom: 35px;
-        }
-}
 
 
 // .menu__block__details__card__petales--delice
 // {@extend .menu__block__details__card__petales;
 //   margin-bottom: 17px;}
 
-// .menu__block__details__card__titles__subtitle--delice
-// {@extend .menu__block__details__card__titles__subtitle;
-//   margin-bottom: 19px;}
+
+
+
+
+
+
+
+
