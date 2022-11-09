@@ -104,3 +104,53 @@
 // @mixin extend-margin-bottom ($extend,$marginb)
 // {@extend .$extend;
 //  margin-bottom: $marginb}
+// menus //
+@mixin menu__block-init($margin-top,$padding-bottom)
+{
+  @extend .menu__block;
+  margin-top:$margin-top;
+  padding-bottom:$padding-bottom;
+}
+
+@mixin menu__block__column-init($margin-bottom)
+{
+ @extend .menu__block__column;
+ margin-bottom: $margin-bottom;
+@include desktop
+{
+ margin-bottom: 50px;
+}
+}
+
+@mixin menu__block__details-init($margin-bottom)
+{
+    @extend .menu__block__details;
+    margin-bottom:$margin-bottom;
+}
+
+@mixin menu__block__dishes-init($margin-bottom)
+{
+    @extend .menu__block__dishes;
+    margin-bottom:$margin-bottom;
+}
+
+@mixin menu__block__details__title-init($margin-bottom)
+{
+  @extend .menu__block__details__title;
+  margin-bottom: $margin-bottom;
+  @include desktop
+  {
+    margin-bottom: 33px;
+  }
+}
+//
+//
+@mixin menu__block__details__card-init($margin-bottom)
+{
+  @extend .menu__block__details__card;
+  margin-bottom: $margin-bottom;
+  @include desktop
+  {
+    margin-bottom:35px;
+  }
+}
