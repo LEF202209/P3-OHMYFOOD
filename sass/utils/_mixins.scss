@@ -13,7 +13,8 @@
         @content; 
     }
 }
-// mixin btn-before
+
+// les boutons //
 @mixin btn-before ($content,$mrg-right) {
     font-family: FontAwesome;
     color:$color-footer;
@@ -22,6 +23,16 @@
     margin-right:$mrg-right;
 }
 
+@mixin color-button($bk-color,$border-width,$border-style,$border-color)
+{
+    background-color:$bk-color;
+    border-top: $border-width $border-style $border-color;
+    border-right: $border-width $border-style $border-color;
+    border-bottom: $border-width $border-style $border-color;
+}
+
+
+// les coeurs //
 @mixin heart($font-weight)
 {
     font-family: "Font Awesome 5 Free";
@@ -33,19 +44,20 @@
     right: 28px;
 }
 
+// définition hauteur et largeur des blocs //
 @mixin width-height($width,$height)
 {
     width: $width;
     height: $height;
 }
-
-@mixin color-button($bk-color,$border-width,$border-style,$border-color)
+// !!!!   à revoir doublons !!!!!!   //
+@mixin height-width($height,$width)
 {
-    background-color:$bk-color;
-    border-top: $border-width $border-style $border-color;
-    border-right: $border-width $border-style $border-color;
-    border-bottom: $border-width $border-style $border-color;
+    height:$height;
+    width:$width;
 }
+
+// les icônes dans le bloc fonctionnement //
 @mixin format-icon-functioning($padding-left,$padding-right)
 {
     @extend .functioning__column__button__icon;
@@ -53,6 +65,7 @@
     padding-left:$padding-left;
 }
 
+// définition des flexbox //
 @mixin flex-justify-content-align-items($display,$justify-content,$align-items)
 {
     display: $display;
@@ -82,18 +95,14 @@
     align-items: $align-items;
 }
 
-@mixin height-width($height,$width)
-{
-    height:$height;
-    width:$width;
-}
 
+//  taille et forme gras des caractères //
 @mixin font-size-font-weight($font-size,$font-weight)
 {
     font-size:$font-size;
     font-weight:$font-weight;
 }
-
+ // format des titres - troncatures //
 @mixin title_format($overflow,$white-space,$text-overflow)
 {
     overflow: $overflow;
@@ -101,17 +110,15 @@
     text-overflow: $text-overflow;
 }
 
-// @mixin extend-margin-bottom ($extend,$marginb)
-// {@extend .$extend;
-//  margin-bottom: $marginb}
-// menus //
+// initialisation marge en  haut et marge en bas du bloc principal des menus //
 @mixin menu__block-init($margin-top,$padding-bottom)
 {
   @extend .menu__block;
   margin-top:$margin-top;
   padding-bottom:$padding-bottom;
-}
+} 
 
+//initialisation  marge en bas des sous bloc des menus//
 @mixin menu__block__column-init($margin-bottom)
 {
  @extend .menu__block__column;
@@ -122,18 +129,21 @@
 }
 }
 
+//initialisation  marge en bas contenu des menu entrées et desserts//
 @mixin menu__block__details-init($margin-bottom)
 {
     @extend .menu__block__details;
     margin-bottom:$margin-bottom;
 }
 
+//initialisation  marge en bas contenu des menu plats//
 @mixin menu__block__dishes-init($margin-bottom)
 {
     @extend .menu__block__dishes;
     margin-bottom:$margin-bottom;
 }
 
+//initialisation  marge en bas titre (Entrées / plats / Desserts )//
 @mixin menu__block__details__title-init($margin-bottom)
 {
   @extend .menu__block__details__title;
@@ -143,8 +153,8 @@
     margin-bottom: 33px;
   }
 }
-//
-//
+
+//initialisation  marge en bas de chaque carte //
 @mixin menu__block__details__card-init($margin-bottom)
 {
   @extend .menu__block__details__card;
@@ -153,4 +163,17 @@
   {
     margin-bottom:35px;
   }
+}
+
+//initialisation affichage prix de chaque carte //
+@mixin menu__block__details__card__price-init($margin-right)
+{
+margin-right: $margin-right;
+font-size:98%;
+font-weight: bold;
+@include desktop
+{
+  margin-left: 20px;
+  font-size:92%;
+}
 }

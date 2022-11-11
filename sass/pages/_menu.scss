@@ -46,7 +46,7 @@
         max-width: 540px;
         margin: auto;
         width: 100%;
-        margin-bottom:15px;
+        margin-bottom:14px;
         @include m.tablette
         {margin: auto;}
         @include m.desktop
@@ -63,7 +63,7 @@
     &__dishes
     {
         @extend .menu__block__details;
-        margin-bottom:19px;
+        margin-bottom:21px;
         @include m.desktop
         {
             padding-bottom: 35px;
@@ -139,24 +139,18 @@
 
 .menu__block--delice
 {
-  @include m.menu__block-init(-65px,70px);
+  @include m.menu__block-init(-65px,72px);
 }
 
 
 
 .menu__block--palette
 {
-  // @extend .menu__block;
-  // margin-top:-65px;
-  // padding-bottom:65px;
-  @include m.menu__block-init(-65px,65px);
+  @include m.menu__block-init(-71px,65px);
 }
 
 .menu__block--note
-{
-  // @extend .menu__block;
-  // margin-top:-70px;
-  // padding-bottom:80px; 
+{ 
   @include m.menu__block-init(-70px,80px);
 }
 
@@ -170,96 +164,62 @@
 .menu__block__column--delice
 {
   @include m.menu__block__column-init(23px);
-  // @extend .menu__block__column;
-  // margin-bottom: 23px;
-  // @include m.desktop
-  // {
-  //  margin-bottom: 50px;
-  // }
 }
 
 .menu__block__column--note
 {
   @include m.menu__block__column-init(25px);
-  // @extend .menu__block__column;
-  // margin-bottom: 25px;
-  // @include m.desktop
-  // {
-  //  margin-bottom: 50px;
-  // }
 }
 
 .menu__block__column--palette
 {
   @include m.menu__block__column-init(27px);
-  // @extend .menu__block__column;
-  // margin-bottom: 27px;
-  // @include m.desktop
-  // {
-  //  margin-bottom: 50px;
-  // }
  }
 
 .menu__block__details--delice
 {
   @include m.menu__block__details-init(6px)
-  // @extend .menu__block__details;
-  // margin-bottom:6px;
 }
 
   .menu__block__details--note
 {
-  @include m.menu__block__details-init(20px)
-  // @extend .menu__block__details;
-  // margin-bottom:20px;
+  @include m.menu__block__details-init(15px)
 }
 
 .menu__block__details--palette
   {
     @include m.menu__block__details-init(9px)
-    // @extend .menu__block__details;
-    // margin-bottom:9px;
   }
   .menu__block__desserts--note
 {
   @include m.menu__block__details-init(16px)
-  // @extend .menu__block__details;
-  // margin-bottom:16px;
 } 
 
 
 .menu__block__dishes--note
   {
-    @include m.menu__block__dishes-init(15px)
-    // @extend .menu__block__dishes;
-    // margin-bottom:15px;
+    @include m.menu__block__dishes-init(19px)
   } 
 
 .menu__block__dishes--palette
   {
     @include m.menu__block__dishes-init(15px)
-    // @extend .menu__block__dishes;
-    // margin-bottom:15px;
   } 
 
 .menu__block__dishes--delice
 {
-  @include m.menu__block__details-init(10px)
-  // @extend .menu__block__details;
-  // margin-bottom:10px ;
+  @include m.menu__block__details-init(13px)
 }
-
-
-
 
 .menu__block__details__title
 {
+  display:flex;
+  flex-direction: column;
   font-size: 17.5px;
   margin-left: 9px;
-  margin-bottom: 14px;
+  margin-bottom: 7px;
   padding: 0px 0 5px 0;
-  border-bottom: 4px solid $color-tertiary;
-  width: 44px;
+  
   @include m.desktop
   {
     font-size: 21.5px;
@@ -267,49 +227,41 @@
     margin-bottom: 33px;
     height:50px;
   }
+  &::after
+  {
+    content:"";
+    border-bottom: 4px solid $color-tertiary;
+    padding-bottom:4px;
+    width: 44px;
+  }
 }
+
+
 
 .menu__block__details__title--delice
 {
-  @include m.menu__block__details__title-init(18px);
-  // @extend .menu__block__details__title;
-  // margin-bottom: 18px;
-  // @include m.desktop
-  // {
-  //   margin-bottom: 33px;
-  // }
+  @include m.menu__block__details__title-init(15px);
 }
-.menu__block__dishes__title--delice
+.menu__block__dishes__title--note
 {
-  @include m.menu__block__details__title-init(16px);
-  // @extend .menu__block__details__title; 
-  // margin-bottom:16px;
-  // @include m.desktop
-  // {
-  //   margin-bottom: 33px;
-  // }
+  @include m.menu__block__details__title-init(8px); 
 } 
+
+
 
 .menu__block__desserts__title
 {
-  @include m.menu__block__details__title-init(17px);
-  // @extend .menu__block__details__title;
-  // margin-bottom:16px;
-  // @include m.desktop
-  //  {
-  //   margin-bottom:33px;
-  //  } 
+  @include m.menu__block__details__title-init(11px); 
 }
 
 .menu__block__desserts__title--note
 {
-  @include m.menu__block__details__title-init(14px);
-  // @extend .menu__block__details__title;
-  // margin-bottom:14px;
-  // @include m.desktop
-  //  {
-  //   margin-bottom:33px;
-  //  } 
+  @include m.menu__block__details__title-init(9px);
+}
+
+.menu__block__desserts__title--palette
+{
+  @include m.menu__block__details__title-init(10px);
 }
 
 .menu__block__details__card
@@ -331,7 +283,7 @@
   {
     margin-bottom: 35px;
   }
-  &__petales
+  &__d1
   {
     @extend .menu__block__details__card;
     margin-bottom:9px;
@@ -340,7 +292,7 @@
         margin-bottom: 35px;
     }
   }
-  &__fondant
+  &__d2
   {
     @extend .menu__block__details__card;
     margin-bottom:14px;
@@ -349,7 +301,7 @@
         margin-bottom: 35px;
     }
   }
-  &__millefeuille
+  &__d3
   {
     @extend .menu__block__details__card;
     margin-bottom:6px;
@@ -414,69 +366,43 @@
 
 .menu__block__details__card--delice
 {
-  @include m.menu__block__details__card-init(13px);
-  // @extend .menu__block__details__card;
-  // margin-bottom: 13px;
-  // @include m.desktop
-  // {
-  //   margin-bottom:35px;
-  // }
+  @include m.menu__block__details__card-init(14px);
 }
 
 .menu__block__details__card--note
 {
   @include m.menu__block__details__card-init(12px);
-  // @extend .menu__block__details__card;
-  // margin-bottom: 12px;
-  // @include m.desktop
-  // {
-  //   margin-bottom:35px;
-  // }
+}
+
+.menu__block__details__card--palette
+{
+  @include m.menu__block__details__card-init(9px);
 }
 
 .menu__block__dishes__card
 {
   @include m.menu__block__details__card-init(18px);
-  // @extend .menu__block__details__card;
-  // margin-bottom:18px;
-  // @include m.desktop
-  // {
-  //   margin-bottom: 35px;
-  // }
 }
 
 
 .menu__block__dishes__card--delice
 {
   @include m.menu__block__details__card-init(17px);
-  // @extend .menu__block__details__card;
-  // margin-bottom:17px; 
-  // @include m.desktop
-  // {
-  //   margin-bottom: 35px;
-  // }
 }
 
 .menu__block__dishes__card--palette
 {
   @include m.menu__block__details__card-init(14px);
-  // @extend .menu__block__details__card;
-  // margin-bottom:14px; 
-  // @include m.desktop
-  // {
-  //   margin-bottom: 35px;
-  // }
 }
 
 .menu__block__desserts__card--delice
 {
   @include m.menu__block__details__card-init(16px);
-  // @extend .menu__block__details__card;
-  // margin-bottom: 16px;
-  // @include m.desktop
-  // {
-  //   margin-bottom: 35px;
-  // }
+}
+
+.menu__block__desserts__card--palette
+{
+  @include m.menu__block__details__card-init(9px);
 }
 
 .menu__block__details__card__titles__title--palette
@@ -489,13 +415,10 @@
   }
 } 
 
-
-
 .menu__block__desserts__card__titles__subtitle
 { 
   @extend .menu__block__details__card__titles__subtitle;
-  font-size:109%;
-  font-weight: bold;
+  font-size:1.13em;
   width:80%;
   @include m.desktop
   {
@@ -513,13 +436,11 @@
 
 .menu__block__details__card__price
 {
-  margin-right: 11px;
-  font-size:98%;
-  font-weight: bold;
-  @include m.desktop
-  {
-    margin-left: 20px;
-    font-size:92%;
-  }
+  @include  m.menu__block__details__card__price-init(11px);
+}
+
+.menu__block__details__card__price--palette
+{
+  @include  m.menu__block__details__card__price-init(17px);
 }
 
