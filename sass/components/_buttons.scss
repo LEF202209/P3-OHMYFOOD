@@ -2,7 +2,7 @@
 @use "./../utils/mixins" as m;
 
 .btn{
-    @include m.height-width(auto,100%);
+    @include m.width-height(100%,auto);
     text-align: center;
 
     &__element{

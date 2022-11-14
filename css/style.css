@@ -42,8 +42,8 @@ input::placeholder {
 }
 
 .btn {
-  height: auto;
   width: 100%;
+  height: auto;
   text-align: center;
 }
 .btn__element {
@@ -101,8 +101,8 @@ input::placeholder {
   margin-bottom: 47px;
 }
 .header__logo, .header__menu__logo {
-  height: auto;
   width: 100%;
+  height: auto;
   padding: 23px 0 15px 0;
   text-align: center;
   box-shadow: 0px 2px 8px #848484;
@@ -125,8 +125,8 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
   width: 100%;
+  height: auto;
   padding-bottom: 67px;
   background-color: #f7f7f7;
 }
@@ -145,13 +145,13 @@ input::placeholder {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: auto;
   width: 100%;
+  height: aut;
   background-color: #EAEAEA;
 }
 .header__search h1 {
-  height: auto;
   width: 78%;
+  height: auto;
   font-size: 27px;
   font-weight: bolder;
   text-align: center;
@@ -164,8 +164,8 @@ input::placeholder {
   }
 }
 .header__search h2 {
-  height: auto;
   width: 102%;
+  height: auto;
   padding-top: 0;
   font-size: 20px;
   font-weight: 300;
@@ -183,8 +183,8 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: auto;
   width: 100%;
+  height: auto;
   background-color: #EAEAEA;
   margin-bottom: 43px;
 }
@@ -199,8 +199,8 @@ input::placeholder {
   }
 }
 .header__search__area__input {
-  height: 50px;
   width: 160px;
+  height: 50px;
   padding-left: 17px;
   background-color: #EAEAEA;
   border: none;
@@ -563,7 +563,7 @@ input::placeholder {
 .restaurant__column__card__text span::before {
   font-family: "Font Awesome 5 Free";
   content: "\f004";
-  font-weight: 40 0;
+  font-weight: 400;
   font-size: 1.6rem;
   position: absolute;
   top: 19px;
@@ -618,8 +618,8 @@ input::placeholder {
 }
 
 .menu__img {
-  height: 304px;
   width: 100%;
+  height: 304px;
 }
 @media screen and (min-width: 992px) {
   .menu__img {
@@ -676,8 +676,8 @@ input::placeholder {
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    height: 600px;
     width: 32%;
+    height: 600px;
     margin-top: 0;
   }
 }
@@ -708,22 +708,22 @@ input::placeholder {
   font-weight: 400;
   font-size: 1.6rem;
   position: absolute;
-  right: 42px;
   top: 42px;
+  right: 42px;
 }
 .menu__block__title span::after {
   font-family: "Font Awesome 5 Free";
   content: "\f004";
   font-weight: 600;
   font-size: 1.6rem;
+  position: absolute;
+  top: 42px;
+  right: 42px;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   transform: scale(0);
-  position: absolute;
-  right: 42px;
-  top: 42px;
 }
 .menu__block__title span:hover::after {
   transition: all ease 0.8s;
@@ -731,7 +731,7 @@ input::placeholder {
 }
 .menu__block__title__element, .menu__block__title__element--delice, .menu__block__title__element--note {
   font-family: "Shrikhand";
-  font-size: 193%;
+  font-size: 1.9rem;
   margin: 23px 26px 16px 12px;
   position: relative;
   max-width: 75%;
@@ -751,21 +751,21 @@ input::placeholder {
 
 .menu__block--delice {
   margin-top: -65px;
-  padding-bottom: 72px;
+  padding-bottom: 70px;
 }
 
 .menu__block--palette {
-  margin-top: -71px;
+  margin-top: -70px;
   padding-bottom: 65px;
 }
 
 .menu__block--note {
-  margin-top: -70px;
+  margin-top: -65px;
   padding-bottom: 80px;
 }
 
 .menu__block__title__element--delice, .menu__block__title__element--note {
-  font-size: 191%;
+  font-size: 1.92rem;
 }
 
 .menu__block__column--delice {
@@ -787,7 +787,7 @@ input::placeholder {
 }
 
 .menu__block__column--palette {
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__column--palette {
@@ -800,19 +800,19 @@ input::placeholder {
 }
 
 .menu__block__details--note {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .menu__block__details--palette {
-  margin-bottom: 9px;
+  margin-bottom: 3px;
 }
 
 .menu__block__desserts--note {
-  margin-bottom: 16px;
+  margin-bottom: 19px;
 }
 
 .menu__block__dishes--note {
-  margin-bottom: 19px;
+  margin-bottom: 16px;
 }
 
 .menu__block__dishes--palette {
@@ -820,26 +820,26 @@ input::placeholder {
 }
 
 .menu__block__dishes--delice {
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 }
 
-.menu__block__details__title, .menu__block__desserts__title--palette, .menu__block__desserts__title--note, .menu__block__desserts__title, .menu__block__dishes__title--note, .menu__block__details__title--delice {
+.menu__block__details__title, .menu__block__desserts__title--palette, .menu__block__desserts__title--note, .menu__block__desserts__title, .menu__block__dishes__title--delice, .menu__block__dishes__title--note, .menu__block__details__title--note, .menu__block__details__title--delice {
   display: flex;
   flex-direction: column;
   font-size: 17.5px;
   margin-left: 9px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   padding: 0px 0 5px 0;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details__title, .menu__block__desserts__title--palette, .menu__block__desserts__title--note, .menu__block__desserts__title, .menu__block__dishes__title--note, .menu__block__details__title--delice {
+  .menu__block__details__title, .menu__block__desserts__title--palette, .menu__block__desserts__title--note, .menu__block__desserts__title, .menu__block__dishes__title--delice, .menu__block__dishes__title--note, .menu__block__details__title--note, .menu__block__details__title--delice {
     font-size: 21.5px;
+    height: 50px;
     margin-left: 0;
     margin-bottom: 33px;
-    height: 50px;
   }
 }
-.menu__block__details__title::after, .menu__block__desserts__title--palette::after, .menu__block__desserts__title--note::after, .menu__block__desserts__title::after, .menu__block__dishes__title--note::after, .menu__block__details__title--delice::after {
+.menu__block__details__title::after, .menu__block__desserts__title--palette::after, .menu__block__desserts__title--note::after, .menu__block__desserts__title::after, .menu__block__dishes__title--delice::after, .menu__block__dishes__title--note::after, .menu__block__details__title--note::after, .menu__block__details__title--delice::after {
   content: "";
   border-bottom: 4px solid #99E2D0;
   padding-bottom: 4px;
@@ -855,8 +855,17 @@ input::placeholder {
   }
 }
 
-.menu__block__dishes__title--note {
+.menu__block__details__title--note {
   margin-bottom: 8px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__details__title--note {
+    margin-bottom: 33px;
+  }
+}
+
+.menu__block__dishes__title--note {
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__dishes__title--note {
@@ -864,8 +873,17 @@ input::placeholder {
   }
 }
 
+.menu__block__dishes__title--delice {
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__dishes__title--delice {
+    margin-bottom: 33px;
+  }
+}
+
 .menu__block__desserts__title {
-  margin-bottom: 11px;
+  margin-bottom: 13px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__desserts__title {
@@ -874,7 +892,7 @@ input::placeholder {
 }
 
 .menu__block__desserts__title--note {
-  margin-bottom: 9px;
+  margin-bottom: 11px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__desserts__title--note {
@@ -903,8 +921,8 @@ input::placeholder {
   border-bottom: 2px solid #F6F6F6;
   border-radius: 15px;
   box-shadow: 0px 4px 15px lightgrey;
-  margin-bottom: 11px;
   padding: 13px 13px 0 14px;
+  margin-bottom: 11px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card, .menu__block__desserts__card--palette, .menu__block__desserts__card--delice, .menu__block__dishes__card--palette, .menu__block__dishes__card--delice, .menu__block__dishes__card, .menu__block__details__card--palette, .menu__block__details__card--note, .menu__block__details__card--delice, .menu__block__details__card__d3, .menu__block__details__card__d2, .menu__block__details__card__d1 {
@@ -938,7 +956,7 @@ input::placeholder {
 .menu__block__details__card__titles {
   width: 85%;
 }
-.menu__block__details__card__titles__title, .menu__block__details__card__titles__title--palette, .menu__block__details__card__titles__title--pigeonneau, .menu__block__details__card__titles__title--delice {
+.menu__block__details__card__titles__title, .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice, .menu__block__details__card__titles__title--palette {
   margin: 0;
   font-size: 124%;
   overflow: hidden;
@@ -946,16 +964,8 @@ input::placeholder {
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details__card__titles__title, .menu__block__details__card__titles__title--palette, .menu__block__details__card__titles__title--pigeonneau, .menu__block__details__card__titles__title--delice {
+  .menu__block__details__card__titles__title, .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice, .menu__block__details__card__titles__title--palette {
     font-size: 98%;
-  }
-}
-.menu__block__details__card__titles__title--pigeonneau, .menu__block__details__card__titles__title--delice {
-  margin: -3px 0 4px 0;
-}
-@media screen and (min-width: 992px) {
-  .menu__block__details__card__titles__title--pigeonneau, .menu__block__details__card__titles__title--delice {
-    margin: 0;
   }
 }
 .menu__block__details__card__titles__title--delice {
@@ -970,24 +980,16 @@ input::placeholder {
     text-overflow: ellipsis;
   }
 }
-.menu__block__details__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice, .menu__block__details__card__titles__subtitle--pigeonneau {
+.menu__block__details__card__titles__subtitle, .menu__block__details__card__titles__subtitle--note, .menu__block__details__card__titles__subtitle--palette, .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice, .menu__block__dishes__card__titles__subtitle {
   margin: 5px 0 14px 0;
-  font-size: 103%;
+  font-size: 1.01rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice, .menu__block__details__card__titles__subtitle--pigeonneau {
+  .menu__block__details__card__titles__subtitle, .menu__block__details__card__titles__subtitle--note, .menu__block__details__card__titles__subtitle--palette, .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice, .menu__block__dishes__card__titles__subtitle {
     font-size: 95%;
-  }
-}
-.menu__block__details__card__titles__subtitle--pigeonneau {
-  margin-bottom: 13px;
-}
-@media screen and (min-width: 992px) {
-  .menu__block__details__card__titles__subtitle--pigeonneau {
-    margin-bottom: 14px;
   }
 }
 
@@ -1001,7 +1003,7 @@ input::placeholder {
 }
 
 .menu__block__details__card--note {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card--note {
@@ -1010,7 +1012,7 @@ input::placeholder {
 }
 
 .menu__block__details__card--palette {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card--palette {
@@ -1028,7 +1030,7 @@ input::placeholder {
 }
 
 .menu__block__dishes__card--delice {
-  margin-bottom: 17px;
+  margin-bottom: 19px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__dishes__card--delice {
@@ -1037,7 +1039,7 @@ input::placeholder {
 }
 
 .menu__block__dishes__card--palette {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__dishes__card--palette {
@@ -1046,7 +1048,7 @@ input::placeholder {
 }
 
 .menu__block__desserts__card--delice {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__desserts__card--delice {
@@ -1055,12 +1057,16 @@ input::placeholder {
 }
 
 .menu__block__desserts__card--palette {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 }
 @media screen and (min-width: 992px) {
   .menu__block__desserts__card--palette {
     margin-bottom: 35px;
   }
+}
+
+.menu__block__details__card__titles--palette {
+  width: 80%;
 }
 
 .menu__block__details__card__titles__title--palette {
@@ -1076,6 +1082,24 @@ input::placeholder {
   }
 }
 
+.menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice {
+  margin: -3px 0 4px 0;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice {
+    margin: 0;
+  }
+}
+
+.menu__block__dishes__card__titles__subtitle {
+  margin-bottom: 13px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__dishes__card__titles__subtitle {
+    margin-bottom: 14px;
+  }
+}
+
 .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice {
   font-size: 1.13em;
   width: 80%;
@@ -1083,12 +1107,19 @@ input::placeholder {
 @media screen and (min-width: 992px) {
   .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice {
     font-size: 95%;
-    width: 80%;
   }
 }
 
 .menu__block__desserts__card__titles__subtitle--delice {
   font-size: 100%;
+}
+
+.menu__block__details__card__titles__subtitle--palette {
+  font-size: 1rem;
+}
+
+.menu__block__details__card__titles__subtitle--note {
+  font-size: 1.03rem;
 }
 
 .menu__block__details__card__price {
@@ -1110,6 +1141,19 @@ input::placeholder {
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card__price--palette {
+    margin-left: 20px;
+    font-size: 92%;
+  }
+}
+
+.menu__block__details__card__price--note {
+  margin-right: 12px;
+  font-size: 98%;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__details__card__price--note {
     margin-left: 20px;
     font-size: 92%;
   }

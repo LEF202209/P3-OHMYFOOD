@@ -52,7 +52,7 @@
     @include m.width-height(100%,78px);
     @include m.color-button($color-bk-functioning,2px,solid,$color-bk-functioning);
     border-radius: 25px;
-    box-shadow: 0px 4px 15px lightgrey;
+    box-shadow: 0px 4px 15px $color-bk-functioning-shadow;
     margin: 0 0 31px 8px;
     position: relative;
     counter-increment: listCounter;
@@ -238,21 +238,21 @@
             }
             span::before 
             {
-                @include m.heart(40 0);
+                @include m.heart(400,19px,28px);
             }
             span::after 
             {
-                @include m.heart(600);
-                background: linear-gradient($color-primary,$color-secondary);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent; 
-                transform: scale(0);
+                @include m.heart(600,19px,28px);
+                @include m.heart-after;
+                // background: linear-gradient($color-primary,$color-secondary);
+                // background-clip: text;
+                // -webkit-background-clip: text;
+                // color: transparent; 
+                // transform: scale(0);
               }
             
             span:hover::after{
-                transition: all ease 0.8s;
-                transform: scale(1);
+                @include m.heart-hover;
             }
             & h4
             {

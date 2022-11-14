@@ -6,7 +6,7 @@
     margin-bottom:47px;
     &__logo
       {
-        @include m.height-width(auto,100%);
+        @include m.width-height(100%,auto);
         padding: 23px 0 15px 0;
         text-align: center;
         box-shadow: 0px 2px 8px $color-shadow-dark;
@@ -22,7 +22,7 @@
     &__search
       {
         @include m.flex-justify-content-flex-direction-align-items(flex,center,column,center);
-        @include m.height-width(auto,100%);
+        @include m.width-height(100%,auto);
         padding-bottom: 67px;
         background-color: $color-header;
         @include m.tablette
@@ -33,11 +33,11 @@
       
         p{
           @include m.flex-justify-content-flex-direction-align-items(flex,center,row,center);
-          @include m.height-width(auto,100%);
+          @include m.width-height(100%,aut);
           background-color:$color-bk-header;
         }
         h1 {
-          @include m.height-width(auto,78%);
+          @include m.width-height(78%,auto);
           @include m.font-size-font-weight(27px,bolder);
           text-align: center;
           margin: 0px auto -3px 37px;
@@ -49,7 +49,7 @@
         }
 
         h2{
-          @include m.height-width(auto,102%);
+          @include m.width-height(102%,auto);
           padding-top: 0;
           @include m.font-size-font-weight(20px,300);
           text-align: center;
@@ -63,7 +63,7 @@
       &__area{
          @include m.flex-justify-content-flex-direction-align-items(flex,center,row,center);
           flex-wrap: wrap;
-          @include m.height-width(auto,100%);
+          @include m.width-height(100%,auto);
           background-color: $color-bk-header;
           margin-bottom: 43px;
 
@@ -78,7 +78,7 @@
           }
 
           &__input{
-            @include m.height-width(50px,160px);
+            @include m.width-height(160px,50px);
             padding-left: 17px;
             background-color: #EAEAEA;
             border: none;
