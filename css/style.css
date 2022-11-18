@@ -676,7 +676,7 @@ input::placeholder {
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    width: 32%;
+    width: 31%;
     height: 600px;
     margin-top: 0;
   }
@@ -687,7 +687,7 @@ input::placeholder {
 @media screen and (min-width: 992px) {
   .menu__block__dishes, .menu__block__dishes--palette, .menu__block__dishes--note {
     padding-bottom: 35px;
-    width: 32%;
+    width: 31%;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -755,7 +755,7 @@ input::placeholder {
 }
 
 .menu__block--palette {
-  margin-top: -70px;
+  margin-top: -65px;
   padding-bottom: 65px;
 }
 
@@ -765,7 +765,7 @@ input::placeholder {
 }
 
 .menu__block__title__element--delice, .menu__block__title__element--note {
-  font-size: 1.92rem;
+  font-size: 1.9rem;
 }
 
 .menu__block__column--delice {
@@ -914,14 +914,13 @@ input::placeholder {
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  height: auto;
+  height: 79px;
   background-color: #ffffff;
-  border-top: 2px solid #F6F6F6;
-  border-right: 2px solid #F6F6F6;
-  border-bottom: 2px solid #F6F6F6;
   border-radius: 15px;
   box-shadow: 0px 4px 15px lightgrey;
-  padding: 13px 13px 0 14px;
+  overflow: hidden;
+  padding: 0 0 0 14px;
+  animation: menu both 0.9s;
   margin-bottom: 11px;
 }
 @media screen and (min-width: 992px) {
@@ -954,17 +953,24 @@ input::placeholder {
   }
 }
 .menu__block__details__card__titles {
+  overflow: hidden;
   width: 85%;
 }
-.menu__block__details__card__titles__title, .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice, .menu__block__details__card__titles__title--palette {
+@media screen and (min-width: 992px) {
+  .menu__block__details__card__titles {
+    font-size: 98%;
+  }
+}
+.menu__block__details__card__titles__title, .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice, .menu__block__details__card__titles__title--note, .menu__block__details__card__titles__title--palette {
   margin: 0;
   font-size: 124%;
+  width: 95%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 992px) {
-  .menu__block__details__card__titles__title, .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice, .menu__block__details__card__titles__title--palette {
+  .menu__block__details__card__titles__title, .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice, .menu__block__details__card__titles__title--note, .menu__block__details__card__titles__title--palette {
     font-size: 98%;
   }
 }
@@ -983,6 +989,7 @@ input::placeholder {
 .menu__block__details__card__titles__subtitle, .menu__block__details__card__titles__subtitle--note, .menu__block__details__card__titles__subtitle--palette, .menu__block__desserts__card__titles__subtitle, .menu__block__desserts__card__titles__subtitle--delice, .menu__block__dishes__card__titles__subtitle {
   margin: 5px 0 14px 0;
   font-size: 1.01rem;
+  width: 95%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -1065,7 +1072,13 @@ input::placeholder {
   }
 }
 
+.menu__block__details__card__titles--note {
+  overflow: hidden;
+  width: 86%;
+}
+
 .menu__block__details__card__titles--palette {
+  overflow: hidden;
   width: 80%;
 }
 
@@ -1082,8 +1095,21 @@ input::placeholder {
   }
 }
 
+.menu__block__details__card__titles__title--note {
+  overflow: initial;
+  white-space: nowrap;
+  text-overflow: initial;
+}
+@media screen and (min-width: 992px) {
+  .menu__block__details__card__titles__title--note {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
 .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice {
-  margin: -3px 0 4px 0;
+  margin: 8px 0 4px 0;
 }
 @media screen and (min-width: 992px) {
   .menu__block__dishes__card__titles__title, .menu__block__details__card__titles__title--delice {
@@ -1129,19 +1155,21 @@ input::placeholder {
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card__price {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
     font-size: 92%;
   }
 }
 
 .menu__block__details__card__price--palette {
-  margin-right: 17px;
+  margin-right: 3px;
   font-size: 98%;
   font-weight: bold;
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card__price--palette {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
     font-size: 92%;
   }
 }
@@ -1154,9 +1182,109 @@ input::placeholder {
 }
 @media screen and (min-width: 992px) {
   .menu__block__details__card__price--note {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
     font-size: 92%;
   }
+}
+
+.card .menu__block__details__card_iconcheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 74px;
+  margin-right: -3.9rem;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  transform: scale(0);
+  /* transition: transform 330ms ease_in_out; */
+  cursor: pointer;
+}
+
+.card:hover .menu__block__details__card_iconcheck {
+  transform: scale(1);
+  /* transform:translateX(-3.9rem);*/
+  transition: all 0.5s;
+  margin-right: 0;
+  padding: 0;
+}
+
+.menu__block__details__card_iconcheck .fa-circle-check {
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.6s;
+}
+
+@keyframes rotate-check {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    letter-spacing: 0;
+    font-size: 0;
+  }
+  80% {
+    font-size: 100px;
+    letter-spacing: 0.2vh;
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: scale(0);
+    transform: rotate(0);
+    font-size: 0;
+  }
+}
+.loader {
+  position: fixed;
+  inset: 0;
+  height: 70vh;
+  width: 100%;
+  color: white;
+  opacity: 0.8;
+  animation: loaderp 3s;
+  animation-fill-mode: forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid blueviolet;
+  border-radius: 50%;
+}
+
+@keyframes loaderp {
+  0% {
+    transform: scale(0.1);
+  }
+  99% {
+    transform: scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.loader p {
+  background: linear-gradient(#9356DC, #FF79DA);
+  font-family: "shrikhand", sans-serif;
+  font-size: 8px;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: loader forwards 3s;
+}
+
+.menu__block__details__card:hover:hover .fa-circle-check, .menu__block__details__card__d1:hover:hover .fa-circle-check, .menu__block__details__card__d2:hover:hover .fa-circle-check, .menu__block__details__card__d3:hover:hover .fa-circle-check, .menu__block__details__card--delice:hover:hover .fa-circle-check, .menu__block__details__card--note:hover:hover .fa-circle-check, .menu__block__details__card--palette:hover:hover .fa-circle-check, .menu__block__dishes__card:hover:hover .fa-circle-check, .menu__block__dishes__card--delice:hover:hover .fa-circle-check, .menu__block__dishes__card--palette:hover:hover .fa-circle-check, .menu__block__desserts__card--delice:hover:hover .fa-circle-check, .menu__block__desserts__card--palette:hover:hover .fa-circle-check {
+  -webkit-animation: rotate-check 0.6s ease-in-out both;
+  animation: rotate-check 0.6s ease-in-out both;
 }
 
 /*# sourceMappingURL=style.css.map */

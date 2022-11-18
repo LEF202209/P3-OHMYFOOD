@@ -56,7 +56,7 @@
             justify-content: flex-start;
             align-content: center;
             align-items:center;
-            @include m.width-height(32%,600px);
+            @include m.width-height(31%,600px);
             margin-top:0;
         }
     }
@@ -67,7 +67,7 @@
         @include m.desktop
         {
             padding-bottom: 35px;
-            width:32%;
+            width:31%;
             margin-top:0;
             margin-bottom:0;
         }
@@ -125,7 +125,7 @@
 
 .menu__block--palette
 {
-  @include m.menu__block-init(-70px,65px);
+  @include m.menu__block-init(-65px,65px);
 }
 
 .menu__block--note
@@ -136,7 +136,7 @@
 .menu__block__title__element--delice
 {
   @extend .menu__block__title__element;
-  font-size:1.92rem;
+  font-size:1.9rem;
 }
 
 .menu__block__column--delice
@@ -253,11 +253,13 @@
 .menu__block__details__card
 {
   @include m.flex-justify-content-align-items(flex,space-between,flex-end);
-  @include m.width-height(100%,auto);
-  @include m.color-button($normal-white-color,2px,solid,$color-bk-functioning);
+  @include m.width-height(100%,79px);
+ background-color: $normal-white-color;
   border-radius: 15px;
   box-shadow: 0px 4px 15px $color-bk-functioning-shadow;
-  padding:13px 13px 0 14px;
+  overflow:hidden;
+  padding:0 0 0 14px;
+  animation: menu both 0.9s;
   @include m.margin-bottom-init(11px);
   &__d1
   {
@@ -277,10 +279,20 @@
   &__titles
   {
     @include m.menu__block__details__card__titles-init(85%);
+    @include m.desktop
+      {
+        $width-card-titles:65%;
+      }
+   
+    @include m.desktop
+        {
+           font-size:98%;
+        }
     &__title
       {
         margin: 0;
         font-size:124%;
+        width:95%;
         @include m.title_format(hidden,nowrap,ellipsis);
         @include m.desktop
         {
@@ -302,6 +314,7 @@
     {    
       margin: 5px 0 14px 0;
       font-size:1.01rem;
+      width:95%;
       @include m.title_format(hidden,nowrap,ellipsis);
       @include m.desktop
       {
@@ -353,6 +366,11 @@
   @include m.menu__block__details__card-init(12px);
 }
 
+.menu__block__details__card__titles--note
+{
+  @include m.menu__block__details__card__titles-init(86%); 
+}
+
 .menu__block__details__card__titles--palette
 {
   @include m.menu__block__details__card__titles-init(80%); 
@@ -368,10 +386,20 @@
   }
 }
 
+.menu__block__details__card__titles__title--note
+{
+  @extend .menu__block__details__card__titles__title;
+  @include m.title_format(initial,nowrap,initial);
+  @include m.desktop
+  {
+    @include m.title_format(hidden,nowrap,ellipsis);
+  }
+}
+
 .menu__block__dishes__card__titles__title
 {
   @extend .menu__block__details__card__titles__title;
-  margin:-3px 0 4px 0;
+  margin:8px 0 4px 0;
   @include m.desktop
   {
     margin:0;
@@ -424,10 +452,120 @@
 
 .menu__block__details__card__price--palette
 {
-  @include  m.menu__block__details__card__price-init(17px);
+  @include  m.menu__block__details__card__price-init(3px);
 }
 .menu__block__details__card__price--note
 {
   @include  m.menu__block__details__card__price-init(12px);
   margin-bottom:12px;
+}
+
+// animations //
+.card .menu__block__details__card_iconcheck
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 74px;
+  margin-right: -3.9rem;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  transform: scale(0);
+  /* transition: transform 330ms ease_in_out; */
+  cursor: pointer;
+}
+
+
+.card:hover .menu__block__details__card_iconcheck{
+ transform:scale(1); 
+ /* transform:translateX(-3.9rem);*/
+ transition:all 0.5s;
+ margin-right:0; 
+ padding:0; 
+}
+
+.menu__block__details__card_iconcheck .fa-circle-check
+{
+  color:white;
+  font-size:2rem;
+  transition:transform 0.6s;
+}
+
+// A déplacer //
+
+@keyframes rotate-check {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    letter-spacing: 0;
+    font-size: 0;
+  }
+  80% {
+    font-size: 100px;
+    letter-spacing:0.2vh;
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: scale(0);
+    transform: rotate(0);
+    font-size: 0;
+  }
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  height: 70vh;
+  width:100%;
+  color:white;
+  opacity: 0.8;
+  animation: loaderp 3s;
+  animation-fill-mode: forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid blueviolet;
+  border-radius:50%;
+}
+
+  @keyframes loaderp {
+    0% {
+      transform: scale(0.1);
+    }
+    99% {
+      transform: scale(0.3);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  .loader p {
+    background: linear-gradient(#9356DC, #FF79DA);
+    font-family: "shrikhand", sans-serif;
+    font-size:8px;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: loader forwards 3s;
+  }
+// Fin keyframes //
+
+.menu__block__details__card:hover:hover .fa-circle-check
+{
+  -webkit-animation: rotate-check 0.6s ease-in-out both;
+  animation: rotate-check 0.6s ease-in-out both;
 }

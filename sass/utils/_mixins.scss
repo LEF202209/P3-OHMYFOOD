@@ -182,7 +182,8 @@
     font-weight: bold;
     @include desktop
     {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right:5px;
     font-size:92%;
     }
 }
@@ -198,5 +199,6 @@
 
 @mixin menu__block__details__card__titles-init($width)
 {
+    overflow:hidden;
     width:$width;
 }
