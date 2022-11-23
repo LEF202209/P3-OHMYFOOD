@@ -175,9 +175,11 @@
 }
 
 //initialisation affichage prix de chaque carte //
-@mixin menu__block__details__card__price-init($margin-right)
+@mixin menu__block__details__card__price-init($margin-bottom,$margin-right)
 {
+    margin-bottom: $margin-bottom;
     margin-right: $margin-right;
+    margin-left:auto;
     font-size:98%;
     font-weight: bold;
     @include desktop
@@ -201,4 +203,12 @@
 {
     overflow:hidden;
     width:$width;
+    padding-top:16px;
+}
+
+@mixin button_hover
+{
+    transform:scale(1.1);
+    transition : ease 0.3s;
+    opacity:0.8;
 }

@@ -30,7 +30,7 @@
     {
         display:flex;
         flex-direction: column;
-        margin-bottom:33px;
+        margin-bottom:36px;
         @include m.desktop
         {
           flex-direction: row;
@@ -97,7 +97,7 @@
       {
         font-family: $font-family-secondary;
         font-size: 1.9rem;
-        margin: 23px 26px 16px 12px;
+        margin: 23px 26px 15px 12px;
         position: relative;
         max-width: 75%;
         @include m.desktop
@@ -110,9 +110,15 @@
       }
       &__element--note
         {
-        @extend .menu__block__title__element--delice;
+        @extend .menu__block__title__element;
         margin-top:25px;
-        font-size:191%;
+        // font-size:1.9rem;
+      }
+      &__element--palette
+      {
+      @extend .menu__block__title__element;
+      margin-bottom:20px;
+      // font-size:1.9rem;
       }
     }
   }
@@ -120,12 +126,12 @@
 
 .menu__block--delice
 {
-  @include m.menu__block-init(-65px,70px);
+  @include m.menu__block-init(-65px,73px);
 }
 
 .menu__block--palette
 {
-  @include m.menu__block-init(-65px,65px);
+  @include m.menu__block-init(-65px,63px);
 }
 
 .menu__block--note
@@ -137,11 +143,12 @@
 {
   @extend .menu__block__title__element;
   font-size:1.9rem;
+  margin-bottom:20px;
 }
 
 .menu__block__column--delice
 {
-  @include m.menu__block__column-init(23px);
+  @include m.menu__block__column-init(25px);
 }
 
 .menu__block__column--note
@@ -151,43 +158,50 @@
 
 .menu__block__column--palette
 {
-  @include m.menu__block__column-init(24px);
+  @include m.menu__block__column-init(30px);
  }
 
 .menu__block__details--delice
 {
-  @include m.menu__block__details-init(6px)
+  @include m.menu__block__details-init(7px)
 }
 
   .menu__block__details--note
 {
-  @include m.menu__block__details-init(17px)
+  @include m.menu__block__details-init(22px)
 }
 
 .menu__block__details--palette
   {
-    @include m.menu__block__details-init(3px)
+    @include m.menu__block__details-init(9px)
   }
-  .menu__block__desserts--note
-{
-  @include m.menu__block__details-init(19px)
-} 
+
 
 
 .menu__block__dishes--note
   {
-    @include m.menu__block__dishes-init(16px)
+    @include m.menu__block__dishes-init(18px)
   } 
 
 .menu__block__dishes--palette
   {
-    @include m.menu__block__dishes-init(15px)
+    @include m.menu__block__dishes-init(20px)
   } 
 
 .menu__block__dishes--delice
 {
-  @include m.menu__block__details-init(11px)
+  @include m.menu__block__details-init(16px)
 }
+
+.menu__block__desserts--note
+{
+  @include m.menu__block__details-init(19px)
+}
+
+.menu__block__desserts--delice
+{
+  @include m.menu__block__details-init(19px)
+} 
 
 .menu__block__details__title
 {
@@ -218,12 +232,12 @@
 
 .menu__block__details__title--delice
 {
-  @include m.menu__block__details__title-init(15px);
+  @include m.menu__block__details__title-init(8px);
 }
 
 .menu__block__details__title--note
 {
-  @include m.menu__block__details__title-init(8px);
+  @include m.menu__block__details__title-init(11px);
 }
 .menu__block__dishes__title--note
 {
@@ -250,16 +264,22 @@
   @include m.menu__block__details__title-init(10px);
 }
 
+.menu__block__desserts__title--delice
+{
+  @include m.menu__block__details__title-init(10px);
+}
+
+
 .menu__block__details__card
 {
   @include m.flex-justify-content-align-items(flex,space-between,flex-end);
-  @include m.width-height(100%,79px);
+  @include m.width-height(100%,auto);
  background-color: $normal-white-color;
   border-radius: 15px;
   box-shadow: 0px 4px 15px $color-bk-functioning-shadow;
   overflow:hidden;
   padding:0 0 0 14px;
-  animation: menu both 0.9s;
+  animation: menu both 0.6s;
   @include m.margin-bottom-init(11px);
   &__d1
   {
@@ -291,7 +311,7 @@
     &__title
       {
         margin: 0;
-        font-size:124%;
+        font-size:1.25rem;
         width:95%;
         @include m.title_format(hidden,nowrap,ellipsis);
         @include m.desktop
@@ -313,8 +333,8 @@
     &__subtitle
     {    
       margin: 5px 0 14px 0;
-      font-size:1.01rem;
-      width:95%;
+      font-size:1.03rem;
+      width:97%;
       @include m.title_format(hidden,nowrap,ellipsis);
       @include m.desktop
       {
@@ -327,7 +347,7 @@
 
 .menu__block__details__card--delice
 {
-  @include m.menu__block__details__card-init(14px);
+  @include m.menu__block__details__card-init(12px);
 }
 
 .menu__block__details__card--note
@@ -342,13 +362,13 @@
 
 .menu__block__dishes__card
 {
-  @include m.menu__block__details__card-init(18px);
+  @include m.menu__block__details__card-init(15px);
 }
 
 
 .menu__block__dishes__card--delice
 {
-  @include m.menu__block__details__card-init(19px);
+  @include m.menu__block__details__card-init(15px);
 }
 
 .menu__block__dishes__card--palette
@@ -358,12 +378,28 @@
 
 .menu__block__desserts__card--delice
 {
-  @include m.menu__block__details__card-init(18px);
+  @include m.menu__block__details__card-init(12px);
 }
+
+.menu__block__desserts__card--delice32
+{
+  @include m.menu__block__details__card-init(16px);
+}
+
+.menu__block__desserts__card--note32
+{
+  @include m.menu__block__details__card-init(15px);
+}
+
 
 .menu__block__desserts__card--palette
 {
   @include m.menu__block__details__card-init(12px);
+}
+
+.menu__block__desserts__card--palette32
+{
+  @include m.menu__block__details__card-init(17px);
 }
 
 .menu__block__details__card__titles--note
@@ -379,6 +415,7 @@
 .menu__block__details__card__titles__title--palette
 {
   @extend .menu__block__details__card__titles__title;
+  font-size:1.23rem;
   @include m.title_format(initial,nowrap,initial);
   @include m.desktop
   {
@@ -389,7 +426,8 @@
 .menu__block__details__card__titles__title--note
 {
   @extend .menu__block__details__card__titles__title;
-  @include m.title_format(initial,nowrap,initial);
+  @include m.title_format(hidden,nowrap,ellipsis);
+  width:90%;
   @include m.desktop
   {
     @include m.title_format(hidden,nowrap,ellipsis);
@@ -399,7 +437,7 @@
 .menu__block__dishes__card__titles__title
 {
   @extend .menu__block__details__card__titles__title;
-  margin:8px 0 4px 0;
+  // margin:8px 0 4px 0;
   @include m.desktop
   {
     margin:0;
@@ -436,7 +474,7 @@
 .menu__block__details__card__titles__subtitle--palette
 {
   @extend .menu__block__details__card__titles__subtitle;
-  font-size:1rem;
+  font-size:1.03rem;
 } 
 
 .menu__block__details__card__titles__subtitle--note
@@ -447,16 +485,16 @@
 
 .menu__block__details__card__price
 {
-  @include  m.menu__block__details__card__price-init(11px);
+  @include  m.menu__block__details__card__price-init(13px,11px);
 }
 
 .menu__block__details__card__price--palette
 {
-  @include  m.menu__block__details__card__price-init(3px);
+  @include  m.menu__block__details__card__price-init(14px,28px);
 }
 .menu__block__details__card__price--note
 {
-  @include  m.menu__block__details__card__price-init(12px);
+  @include  m.menu__block__details__card__price-init(12px,9px);
   margin-bottom:12px;
 }
 
@@ -470,6 +508,7 @@
   width: 74px;
   margin-right: -3.9rem;
   height: 100%;
+  min-height:79px;
   border-radius: 0 15px 15px 0;
   transform: scale(0);
   /* transition: transform 330ms ease_in_out; */
@@ -485,14 +524,27 @@
  padding:0; 
 }
 
+.card:hover .menu__block__details__card__titles--note
+{width:65%;}
+
 .menu__block__details__card_iconcheck .fa-circle-check
 {
   color:white;
-  font-size:2rem;
+  font-size:1.4rem;
   transition:transform 0.6s;
 }
 
 // A déplacer //
+@keyframes menu {
+  0% {
+    opacity:0;
+    transform:translateY(-100px);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
 
 @keyframes rotate-check {
   0% {
@@ -523,7 +575,10 @@
 }
 
 .loader {
-  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   inset: 0;
   height: 70vh;
   width:100%;
@@ -531,20 +586,129 @@
   opacity: 0.8;
   animation: loaderp 3s;
   animation-fill-mode: forwards;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 10px solid blueviolet;
   border-radius:50%;
 }
+
+.menu__block__details__card:hover:hover .fa-circle-check
+{
+  -webkit-animation: rotate-check 0.6s ease-in-out both;
+  animation: rotate-check 0.6s ease-in-out both;
+}
+
+article .card:nth-child(2)
+{animation:menu 1s ease-out both 170ms ;}
+
+article .card:nth-child(3)
+{animation:menu 1s ease-out both 340ms ;}
+
+article .card:nth-child(4)
+{animation:menu 1s ease-out both 510ms ;}
+
+article .card:nth-child(5)
+{animation:menu 1s ease-out both 680ms ;}
+
+
+.loader__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width:100%;
+ z-index:1001;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 8.5rem; 
+//    width: 100vh;
+//   height: 100vh;
+// border-radius: 50vh; 
+  background-color: rgb(238, 167, 238);
+  margin:auto;
+  animation: loaderp 6s;
+  animation: scale-up-center 6s ease-out 0.2s 1 normal none;
+  animation-fill-mode: forwards;
+  z-index:1002;
+  @include m.tablette
+  {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 12.5rem; 
+  }
+  @include m.desktop
+  {
+    width: 35rem;
+    height: 35rem;
+    border-radius: 17.5rem;
+  }
+}
+  
+
+  .loader p {
+    background: linear-gradient(#9356DC, #FF79DA);
+    font-family: "shrikhand", sans-serif;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: loader forwards 6s;
+    z-index:1003;
+  }
+
+
+.loader__container::before
+{
+  display: flex;
+  content: "";
+  position: fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color: black; 
+  opacity: 0.5;
+  animation:loader_background 0.1s ease 6s forwards;
+  z-index:1000;
+}
+
+@keyframes scale-up-center {
+    
+  0% {
+    transform:scale(.1);
+  }
+  50% {
+    transform:scale(1);
+  }
+  100% {
+    transform:scale(0);
+  }
+}
+
+@keyframes loader_background {
+    
+  0% {
+   height:100%;
+  }
+  100% {
+    height:0%;
+  }
+}
+
 
   @keyframes loaderp {
     0% {
       transform: scale(0.1);
     }
-    99% {
+    90% {
       transform: scale(0.3);
-      opacity: 0.8;
+      opacity: 1;
     }
     100% {
       transform: scale(0);
@@ -552,20 +716,23 @@
     }
   }
 
-  .loader p {
-    background: linear-gradient(#9356DC, #FF79DA);
-    font-family: "shrikhand", sans-serif;
-    font-size:8px;
-    font-weight: bold;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: loader forwards 3s;
-  }
-// Fin keyframes //
 
-.menu__block__details__card:hover:hover .fa-circle-check
-{
-  -webkit-animation: rotate-check 0.6s ease-in-out both;
-  animation: rotate-check 0.6s ease-in-out both;
+@keyframes loader {
+  0% {
+    letter-spacing: 0;
+    font-size: 0;
+  }
+  80% {
+    font-size: 40px;
+    letter-spacing:0.5vw;
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: scale(0);
+    transform: rotate(0);
+    font-size: 0;
+  }
 }
+
+
+
