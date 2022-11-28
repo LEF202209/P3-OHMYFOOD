@@ -1,12 +1,83 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins" as m;
 
+// animation fond d'écran sombre & centrage spinner  //
+.loader__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width:100%;
+    z-index:101;
+  }
+
+.loader__container::before
+  {
+    display: flex;
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: $color-bk-black; 
+    opacity: 0.5;
+    animation:loader_background 0.1s ease 3s forwards;
+    z-index:100;
+  }
+
+  // animation : boîte spinner //
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    color:$normal-white-color;
+    opacity: 0.8;
+    border: 10px solid $color-primary;
+    // background-color: rgb(238, 167, 238);
+    background-color: $color-secondary;
+    margin:auto;
+    animation: scale-up-center 3s ease-out 0.2s 1 normal none;
+    animation-fill-mode: forwards;
+    z-index:102;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 8.5rem; 
+    @include m.tablet
+    {
+      width: 25rem;
+      height: 25rem;
+      border-radius: 12.5rem; 
+    }
+    @include m.desktop
+    {
+      width: 35rem;
+      height: 35rem;
+      border-radius: 17.5rem;
+    }
+  }
+    
+// animation : spinner - texte //  
+    .loader p {
+      background: linear-gradient($color-primary, $color-secondary);
+      font-family: "shrikhand", sans-serif;
+      font-weight: 900;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: loader forwards 3s;
+      z-index:103;
+    }
+  // Fin loader spinner //
+  
 .functioning
 {
     display:flex;
     flex-direction: column;
     margin-bottom:45px;
-    @include m.tablette
+    @include m.tablet
     {
     margin-bottom: 0px;
     }
@@ -32,7 +103,7 @@
         margin: 0 auto 35px auto;
         font-size: 165%;
 
-    @include m.tablette
+    @include m.tablet
     {
         font-size: 36px;
         margin-bottom: 55px;
@@ -91,7 +162,7 @@
     &__icon
     {   
         font-size: 21px;
-        color: #848484;
+        color: $color-shadow-dark;
         padding: 0px 31px 0 36px;
         @include m.desktop
         {
@@ -136,7 +207,7 @@
         width:88%;
         font-size: 165%;
         margin:55px auto 25px auto;
-        @include m.tablette
+        @include m.tablet
         {
             font-size: 36px;
             margin-bottom: 55px;
@@ -160,7 +231,7 @@
         width:90%;
         margin:auto;
 
-        @include m.tablette
+        @include m.tablet
         {
           flex-direction: row;
           justify-content: space-between;
@@ -176,7 +247,7 @@
     margin:0;
     width:100%;
            
-    @include m.tablette
+    @include m.tablet
         {
             width: 46%;
         }
@@ -190,7 +261,7 @@
         margin: 0px auto 26px auto;
         box-shadow: 1px 2px 20px $color-bk;
     
-        @include m.tablette
+        @include m.tablet
         {
             margin-bottom: 70px;
         }
@@ -214,9 +285,7 @@
             border-radius: 4px;
             z-index: 999;
             @include m.font-size-font-weight(16px,bold);
-            // font-size: 16px;
-            // font-weight: bold;
-            @include m.tablette
+            @include m.tablet
             {
                 @include m.width-height(115px,40px);
                 font-size: 18px;
@@ -232,7 +301,7 @@
             padding: 13px 13px;
             margin: 0 0 1px 2px;
             position:relative;
-            @include m.tablette
+            @include m.tablet
             {
                 padding: 20px 20px;
             }
@@ -244,11 +313,6 @@
             {
                 @include m.heart(600,19px,28px);
                 @include m.heart-after;
-                // background: linear-gradient($color-primary,$color-secondary);
-                // background-clip: text;
-                // -webkit-background-clip: text;
-                // color: transparent; 
-                // transform: scale(0);
               }
             
             span:hover::after{
@@ -278,7 +342,7 @@
                 object-fit: cover;
                 border-radius: 18px 18px 0 0;
                 object-position: bottom;
-                @include m.tablette
+                @include m.tablet
                 {
                  height: 210px;
                 }

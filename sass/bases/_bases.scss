@@ -29,13 +29,13 @@ img{
 a
     {
         text-decoration:none;
-        color:black;
+        color:$color-bk-black;
     }
 
     input::placeholder {
         color: $color-search-input;
         @include m.font-size-font-weight(17px,bold);
-        @include m.tablette
+        @include m.tablet
         {font-size:20px;}
 
         @include m.desktop

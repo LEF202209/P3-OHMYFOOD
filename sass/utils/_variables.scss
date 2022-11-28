@@ -5,6 +5,7 @@ $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $color-search-input:#4a4a4a;
 $color-bk-footer:#313131;
+$color-bk-black:darken($color-bk-footer,25%);
 $color-footer:#fafafa;
 $color-bk:#d2d2d2;
 $color-shadow-dark:#848484;
@@ -16,7 +17,6 @@ $color-bk-functioning-shadow:lightgrey;
 $color-figure-shadow : silver;
 $normal-blue-color:blue;
 $normal-white-color:#ffffff;
-$width-card-titles:85%;
 
 
-$breakpoints:( tablette:768px , desktop:992px);
+$breakpoints:( tablet:768px , desktop:992px);

@@ -12,7 +12,7 @@
         box-shadow: 0px 2px 8px $color-shadow-dark;
           &__img{
             height: 31px;
-            @include m.tablette
+            @include m.tablet
             {height:45px;}
 
             @include m.desktop
@@ -25,7 +25,7 @@
         @include m.width-height(100%,auto);
         padding-bottom: 67px;
         background-color: $color-header;
-        @include m.tablette
+        @include m.tablet
         {padding-bottom:50px;}
 
         @include m.desktop
@@ -41,7 +41,7 @@
           @include m.font-size-font-weight(27px,bolder);
           text-align: center;
           margin: 0px auto -3px 37px;
-          @include m.tablette
+          @include m.tablet
           {
             font-size: 35px;
             margin:0px auto -3px auto;
@@ -54,7 +54,7 @@
           @include m.font-size-font-weight(20px,300);
           text-align: center;
           margin: 15px auto 33px auto;
-          @include m.tablette
+          @include m.tablet
           {
           font-size: 25px;
           }
@@ -70,7 +70,7 @@
           &__icon{
             font-size: 19px;
             margin-left: -10px;
-            @include m.tablette
+            @include m.tablet
             {
               font-size: 25px;
               margin-left: 90px;
@@ -80,12 +80,12 @@
           &__input{
             @include m.width-height(160px,50px);
             padding-left: 17px;
-            background-color: #EAEAEA;
+            background-color: $color-bk-header;
             border: none;
-            color: #4a4a4a;
+            color: $color-search-input;
             text-align: left;
             @include m.font-size-font-weight(17px,bold);
-            @include m.tablette
+            @include m.tablet
             {
               font-size:20px;
               width: 250px;

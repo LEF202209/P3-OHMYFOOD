@@ -9,15 +9,15 @@
       @include m.flex-justify-content-align-items(flex,center,center);
       @include m.font-size-font-weight(112%,normal);
       height: 56px;
-      color: #fafafa;
-      background-image: linear-gradient(#FF79DA, #9356DC);
+      color: $color-footer;
+      background-image: linear-gradient($color-secondary, $color-primary);
       border: none;
       border-radius: 50px;
-      background-color: #FF79DA;
+      background-color: $color-secondary;
       margin: auto;
       padding: 0 23px 0 31px;
       cursor:pointer;
-      @include m.tablette
+      @include m.tablet
       {
         height:60px;
         @include m.font-size-font-weight(20px,bolder);

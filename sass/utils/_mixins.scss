@@ -2,8 +2,8 @@
 
 // media queries
 
-@mixin tablette {
-    @media screen and (min-width: map-get($breakpoints, tablette)){
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
         @content;
     }
 }
@@ -104,7 +104,6 @@
     align-items: $align-items;
 }
 
-
 //  taille et forme gras des caractères //
 @mixin font-size-font-weight($font-size,$font-weight)
 {
@@ -190,6 +189,7 @@
     }
 }
 
+//initialisation marge bas //
 @mixin margin-bottom-init($margin-bottom)
 {
     margin-bottom: $margin-bottom;
@@ -199,6 +199,7 @@
     }
 }
 
+// Définition largeur bloc titres des menus //
 @mixin menu__block__details__card__titles-init($width)
 {
     overflow:hidden;
@@ -206,9 +207,11 @@
     padding-top:16px;
 }
 
+// changement au passage de la souris pour les boutons //
 @mixin button_hover
 {
     transform:scale(1.1);
     transition : ease 0.3s;
-    opacity:0.8;
+    box-shadow: 0px 2px 3px $color-bk-black;
+    opacity:0.7;
 }

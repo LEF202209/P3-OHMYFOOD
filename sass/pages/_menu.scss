@@ -19,7 +19,7 @@
     margin:-65px auto 0 auto;
     width: 100%;
     padding: 11px 3% 90px 3%;
-    @include m.tablette
+    @include m.tablet
     {padding:11px 15% 95px 15%}
     @include m.desktop
     {
@@ -46,7 +46,7 @@
         margin: auto;
         width: 100%;
         margin-bottom:14px;
-        @include m.tablette
+        @include m.tablet
         {
           margin: auto;
         }
@@ -111,19 +111,20 @@
       &__element--note
         {
         @extend .menu__block__title__element;
-        margin-top:25px;
+        margin-top:22px;
         // font-size:1.9rem;
       }
       &__element--palette
       {
       @extend .menu__block__title__element;
-      margin-bottom:20px;
+      margin-bottom:15px;
       // font-size:1.9rem;
       }
     }
   }
 }
 
+// bloc des menus //
 .menu__block--delice
 {
   @include m.menu__block-init(-65px,73px);
@@ -138,37 +139,38 @@
 { 
   @include m.menu__block-init(-65px,80px);
 }
-  
+
+// gros titres menu //  
 .menu__block__title__element--delice
 {
   @extend .menu__block__title__element;
   font-size:1.9rem;
-  margin-bottom:20px;
+  margin-bottom:17px;
 }
 
+// initialisation  marge en bas bloc des menus //
 .menu__block__column--delice
 {
   @include m.menu__block__column-init(25px);
 }
-
 .menu__block__column--note
 {
-  @include m.menu__block__column-init(25px);
+  @include m.menu__block__column-init(26px);
 }
-
 .menu__block__column--palette
 {
   @include m.menu__block__column-init(30px);
- }
+}
 
+// initialisation  marge en bas sous-bloc des menus : entrées //
 .menu__block__details--delice
 {
-  @include m.menu__block__details-init(7px)
+  @include m.menu__block__details-init(5px)
 }
 
   .menu__block__details--note
 {
-  @include m.menu__block__details-init(22px)
+  @include m.menu__block__details-init(20px)
 }
 
 .menu__block__details--palette
@@ -176,33 +178,39 @@
     @include m.menu__block__details-init(9px)
   }
 
-
-
+// initialisation  marge en bas sous-bloc des menus : plats //
 .menu__block__dishes--note
   {
-    @include m.menu__block__dishes-init(18px)
+    @include m.menu__block__dishes-init(15px)
   } 
 
 .menu__block__dishes--palette
   {
-    @include m.menu__block__dishes-init(20px)
+    @include m.menu__block__dishes-init(18px)
   } 
 
 .menu__block__dishes--delice
 {
-  @include m.menu__block__details-init(16px)
+  @include m.menu__block__details-init(12px)
 }
 
+// initialisation  marge en bas sous-bloc des menus : desserts //
 .menu__block__desserts--note
 {
-  @include m.menu__block__details-init(19px)
+  @include m.menu__block__details-init(14px)
 }
 
 .menu__block__desserts--delice
 {
-  @include m.menu__block__details-init(19px)
+  @include m.menu__block__details-init(17px)
 } 
 
+.menu__block__desserts--palette
+  {
+    @include m.menu__block__details-init(5px)
+  }
+
+// sous-bloc des menus : propriétés titre commun ( entrées / plats / desserts) //
 .menu__block__details__title
 {
   display:flex;
@@ -219,6 +227,8 @@
     margin-left: 0;
     margin-bottom: 33px;
   }
+
+ // sous-bloc des menus : soulignement titre ( entrées / plats / desserts) //
   &::after
   {
     content:"";
@@ -228,8 +238,7 @@
   }
 }
 
-
-
+// sous-bloc des menus : titre commun ( entrées / plats / desserts) - définition marge bas //
 .menu__block__details__title--delice
 {
   @include m.menu__block__details__title-init(8px);
@@ -237,44 +246,33 @@
 
 .menu__block__details__title--note
 {
-  @include m.menu__block__details__title-init(11px);
+  @include m.menu__block__details__title-init(9px);
 }
-.menu__block__dishes__title--note
+
+.menu__block__dishes__title--delice
 {
   @include m.menu__block__details__title-init(10px); 
 } 
 
-.menu__block__dishes__title--delice
-{
-  @include m.menu__block__details__title-init(12px); 
-} 
-
+// sous-bloc des menus : titre ( desserts) - définition marge bas //
 .menu__block__desserts__title
 {
   @include m.menu__block__details__title-init(13px); 
 }
 
-.menu__block__desserts__title--note
-{
-  @include m.menu__block__details__title-init(11px);
-}
-
-.menu__block__desserts__title--palette
+.menu__block__desserts__title--autres
 {
   @include m.menu__block__details__title-init(10px);
 }
 
-.menu__block__desserts__title--delice
-{
-  @include m.menu__block__details__title-init(10px);
-}
+// autres : autres que 'à la française' //
 
-
+// carte : propriétés // //
 .menu__block__details__card
 {
   @include m.flex-justify-content-align-items(flex,space-between,flex-end);
   @include m.width-height(100%,auto);
- background-color: $normal-white-color;
+  background-color: $normal-white-color;
   border-radius: 15px;
   box-shadow: 0px 4px 15px $color-bk-functioning-shadow;
   overflow:hidden;
@@ -296,6 +294,7 @@
     @extend .menu__block__details__card;
     @include m.margin-bottom-init(6px);
   }
+  // bloc titre et sous_titre menu
   &__titles
   {
     @include m.menu__block__details__card__titles-init(85%);
@@ -308,6 +307,7 @@
         {
            font-size:98%;
         }
+    // titre menu //
     &__title
       {
         margin: 0;
@@ -329,7 +329,7 @@
           @include m.title_format(hidden,nowrap,ellipsis);
         }
       } 
-
+    //sous-titre menu //
     &__subtitle
     {    
       margin: 5px 0 14px 0;
@@ -344,7 +344,7 @@
 
 }
 }
-
+// carte entrée: initialisation marge bas //
 .menu__block__details__card--delice
 {
   @include m.menu__block__details__card-init(12px);
@@ -360,11 +360,11 @@
   @include m.menu__block__details__card-init(12px);
 }
 
+// carte plat : initialisation marge bas //
 .menu__block__dishes__card
 {
   @include m.menu__block__details__card-init(15px);
 }
-
 
 .menu__block__dishes__card--delice
 {
@@ -376,6 +376,7 @@
   @include m.menu__block__details__card-init(13px);
 }
 
+// carte dessert: initialisation marge bas //
 .menu__block__desserts__card--delice
 {
   @include m.menu__block__details__card-init(12px);
@@ -391,7 +392,6 @@
   @include m.menu__block__details__card-init(15px);
 }
 
-
 .menu__block__desserts__card--palette
 {
   @include m.menu__block__details__card-init(12px);
@@ -402,6 +402,7 @@
   @include m.menu__block__details__card-init(17px);
 }
 
+// carte  : bloc titres - initialisation marge bas //
 .menu__block__details__card__titles--note
 {
   @include m.menu__block__details__card__titles-init(86%); 
@@ -409,41 +410,50 @@
 
 .menu__block__details__card__titles--palette
 {
-  @include m.menu__block__details__card__titles-init(80%); 
+  @include m.menu__block__details__card__titles-init(82%); 
 }
+
+// carte  : bloc titres - gros titre troncture //
 
 .menu__block__details__card__titles__title--palette
 {
   @extend .menu__block__details__card__titles__title;
   font-size:1.23rem;
-  @include m.title_format(initial,nowrap,initial);
-  @include m.desktop
-  {
-    @include m.title_format(hidden,nowrap,ellipsis);
-  }
+  @include m.title_format(hidden,nowrap,ellipsis);
 }
 
 .menu__block__details__card__titles__title--note
 {
   @extend .menu__block__details__card__titles__title;
   @include m.title_format(hidden,nowrap,ellipsis);
-  width:90%;
+  width:91%;
   @include m.desktop
-  {
-    @include m.title_format(hidden,nowrap,ellipsis);
-  }
 }
 
+// carte plat : bloc titres - gros titre initialisation marge //
 .menu__block__dishes__card__titles__title
 {
   @extend .menu__block__details__card__titles__title;
-  // margin:8px 0 4px 0;
   @include m.desktop
   {
     margin:0;
   }
 }
 
+// carte  : bloc titres - sous-titre  //
+.menu__block__details__card__titles__subtitle--palette
+{
+  @extend .menu__block__details__card__titles__subtitle;
+  font-size:1.03rem;
+} 
+
+.menu__block__details__card__titles__subtitle--note
+{
+  @extend .menu__block__details__card__titles__subtitle;
+  font-size:1.03rem;
+} 
+
+// carte  plat : bloc titres - sous-titre  //
 .menu__block__dishes__card__titles__subtitle
 {
   @extend .menu__block__details__card__titles__subtitle;
@@ -454,6 +464,7 @@
   } 
 }  
 
+// carte  dessert : bloc titres - sous-titre  //
 .menu__block__desserts__card__titles__subtitle
 { 
   @extend .menu__block__details__card__titles__subtitle;
@@ -471,269 +482,56 @@
   font-size:100%;
 } 
 
-.menu__block__details__card__titles__subtitle--palette
-{
-  @extend .menu__block__details__card__titles__subtitle;
-  font-size:1.03rem;
-} 
-
-.menu__block__details__card__titles__subtitle--note
-{
-  @extend .menu__block__details__card__titles__subtitle;
-  font-size:1.03rem;
-} 
-
+// carte  : bloc titres - Prix : définition marge bas - marge droite //
+// A la française //
 .menu__block__details__card__price
 {
-  @include  m.menu__block__details__card__price-init(13px,11px);
+  @include  m.menu__block__details__card__price-init(13px,25px);
 }
 
-.menu__block__details__card__price--palette
+//Autres menus : délice des sens - la note enchantée - la palette du goût//
+.menu__block__details__card__price--autres
 {
-  @include  m.menu__block__details__card__price-init(14px,28px);
-}
-.menu__block__details__card__price--note
-{
-  @include  m.menu__block__details__card__price-init(12px,9px);
-  margin-bottom:12px;
+  @include  m.menu__block__details__card__price-init(14px,27px);
 }
 
-// animations //
+// carte  : bloc titres : propriétés boite verte //
 .card .menu__block__details__card_iconcheck
 {
   display: flex;
   justify-content: center;
   align-items:center;
   align-self:stretch;
-  background-color: #99E2D0;
-  width: 74px;
-  margin-right: -3.9rem;
-  // height: 100%;
-  // min-height:79px;
+  background-color: $color-tertiary;
+  width: 5rem;
+  margin-right: -5rem;
   border-radius: 0 15px 15px 0;
-  transform: scale(0);
-  /* transition: transform 330ms ease_in_out; */
   cursor: pointer;
 }
 
-
 .card:hover .menu__block__details__card_iconcheck{
- transform:scale(1); 
- /* transform:translateX(-3.9rem);*/
  transition:all 0.5s;
  margin-right:0; 
  padding:0; 
 }
-
-.card:hover .menu__block__details__card__titles--note
-{width:65%;}
-
+// carte  : bloc titres : icône boite verte //
 .menu__block__details__card_iconcheck .fa-circle-check
 {
-  color:white;
+  color:$normal-white-color;
   font-size:1.4rem;
-  transition:transform 0.6s;
 }
-
-// A déplacer //
-@keyframes menu {
-  0% {
-    opacity:0;
-    transform:translateY(-100px);
-  }
-  100% {
-    opacity:1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes rotate-check {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loader {
-  0% {
-    letter-spacing: 0;
-    font-size: 0;
-  }
-  80% {
-    font-size: 2.5rem;
-    letter-spacing:0.2vh;
-    transform: rotate(720deg);
-  }
-  100% {
-    transform: scale(0);
-    transform: rotate(0);
-    font-size: 0;
-  }
-}
-
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  inset: 0;
-  height: 70vh;
-  width:100%;
-  color:white;
-  opacity: 0.8;
-  animation: loaderp 3s;
-  animation-fill-mode: forwards;
-  border: 10px solid blueviolet;
-  border-radius:50%;
-}
-
-.menu__block__details__card:hover:hover .fa-circle-check
+.menu__block__details__card:hover .fa-circle-check
 {
   -webkit-animation: rotate-check 0.6s ease-in-out both;
   animation: rotate-check 0.6s ease-in-out both;
 }
 
-article .card:nth-child(2)
-{animation:menu 1s ease-out both 170ms ;}
-
-article .card:nth-child(3)
-{animation:menu 1s ease-out both 340ms ;}
-
-article .card:nth-child(4)
-{animation:menu 1s ease-out both 510ms ;}
-
-article .card:nth-child(5)
-{animation:menu 1s ease-out both 680ms ;}
-
-
-.loader__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width:100%;
- z-index:1001;
-}
-
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  width: 17rem;
-  height: 17rem;
-  border-radius: 8.5rem; 
-//    width: 100vh;
-//   height: 100vh;
-// border-radius: 50vh; 
-  background-color: rgb(238, 167, 238);
-  margin:auto;
-  animation: loaderp 4s;
-  animation: scale-up-center 4s ease-out 0.2s 1 normal none;
-  animation-fill-mode: forwards;
-  z-index:1002;
-  @include m.tablette
-  {
-    width: 25rem;
-    height: 25rem;
-    border-radius: 12.5rem; 
-  }
-  @include m.desktop
-  {
-    width: 35rem;
-    height: 35rem;
-    border-radius: 17.5rem;
+//animation carte menu //
+@for $i from 2 through 5 {
+ article .card:nth-child(#{$i}) 
+ {
+      animation: menu 1s ease-out both 200ms*(($i)-1);
+      -webkit-animation: menu 1s ease-out both 200ms*(($i)-1);
   }
 }
-  
-
-  .loader p {
-    background: linear-gradient(#9356DC, #FF79DA);
-    font-family: "shrikhand", sans-serif;
-    font-weight: 900;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: loader forwards 4s;
-    z-index:1003;
-  }
-
-
-.loader__container::before
-{
-  display: flex;
-  content: "";
-  position: fixed;
-  top:0;
-  left:0;
-  height:100%;
-  width:100%;
-  background-color: black; 
-  opacity: 0.5;
-  animation:loader_background 0.1s ease 4s forwards;
-  z-index:1000;
-}
-
-@keyframes scale-up-center {
-    
-  0% {
-    transform:scale(.1);
-  }
-  50% {
-    transform:scale(1);
-  }
-  100% {
-    transform:scale(0);
-  }
-}
-
-@keyframes loader_background {
-    
-  0% {
-   height:100%;
-  }
-  100% {
-    height:0%;
-  }
-}
-
-
-  @keyframes loaderp {
-    0% {
-      transform: scale(0.1);
-    }
-    90% {
-      transform: scale(0.3);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(0);
-      opacity: 0;
-    }
-  }
-
-
-@keyframes loader {
-  0% {
-    letter-spacing: 0;
-    font-size: 0;
-  }
-  80% {
-    font-size: 40px;
-    letter-spacing:0.5vw;
-    transform: rotate(720deg);
-  }
-  100% {
-    transform: scale(0);
-    transform: rotate(0);
-    font-size: 0;
-  }
-}
-
-
 
