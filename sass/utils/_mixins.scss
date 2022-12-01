@@ -22,7 +22,6 @@
     content: $content;
     margin-right:$mrg-right;
 }
-
 @mixin color-button($bk-color,$border-width,$border-style,$border-color)
 {
     background-color:$bk-color;
@@ -30,8 +29,6 @@
     border-right: $border-width $border-style $border-color;
     border-bottom: $border-width $border-style $border-color;
 }
-
-
 // les coeurs //
 @mixin heart($font-weight,$top,$right)
 {
@@ -43,7 +40,6 @@
     top: $top;
     right: $right;
 }
-
 @mixin heart-after
 {
     background: linear-gradient(#9356DC, #FF79DA);
@@ -52,7 +48,6 @@
     color: transparent;
     transform: scale(0);
 }
-
 @mixin heart-hover
 {
     transition: all ease 0.8s;
@@ -117,7 +112,6 @@
     white-space: $white-space;
     text-overflow: $text-overflow;
 }
-
 // initialisation marge en  haut et marge en bas du bloc principal des menus //
 @mixin menu__block-init($margin-top,$padding-bottom)
 {
@@ -125,7 +119,6 @@
     margin-top:$margin-top;
     padding-bottom:$padding-bottom;
 } 
-
 //initialisation  marge en bas des sous bloc des menus//
 @mixin menu__block__column-init($margin-bottom)
 {
@@ -136,21 +129,18 @@
     margin-bottom: 50px;
     }
 }
-
 //initialisation  marge en bas contenu des menu entrées et desserts//
 @mixin menu__block__details-init($margin-bottom)
 {
     @extend .menu__block__details;
     margin-bottom:$margin-bottom;
 }
-
 //initialisation  marge en bas contenu des menu plats//
 @mixin menu__block__dishes-init($margin-bottom)
 {
     @extend .menu__block__dishes;
     margin-bottom:$margin-bottom;
 }
-
 //initialisation  marge en bas titre (Entrées / plats / Desserts )//
 @mixin menu__block__details__title-init($margin-bottom)
 {

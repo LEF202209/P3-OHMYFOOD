@@ -33,7 +33,7 @@
       
         p{
           @include m.flex-justify-content-flex-direction-align-items(flex,center,row,center);
-          @include m.width-height(100%,aut);
+          @include m.width-height(100%,auto);
           background-color:$color-bk-header;
         }
         h1 {
