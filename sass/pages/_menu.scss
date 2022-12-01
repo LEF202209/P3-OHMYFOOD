@@ -102,7 +102,7 @@
         max-width: 75%;
         @include m.desktop
         {
-            font-size: 35.5px;
+            font-size: 2.219rem;
             margin-bottom: 31px;
             margin-top:15px;
             text-align:center;
@@ -305,7 +305,7 @@
    
     @include m.desktop
         {
-           font-size:98%;
+           font-size:0.98rem;
         }
     // titre menu //
     &__title
@@ -316,7 +316,7 @@
         @include m.title_format(hidden,nowrap,ellipsis);
         @include m.desktop
         {
-           font-size:98%;
+           font-size:0.98rem;
         }
       }
 
@@ -338,7 +338,7 @@
       @include m.title_format(hidden,nowrap,ellipsis);
       @include m.desktop
       {
-        font-size:95%;
+        font-size:0.95rem;
       }
     } 
 
@@ -472,14 +472,14 @@
   width:80%;
   @include m.desktop
   {
-    font-size:95%;
+    font-size:0.95rem;
   } 
 }
 
 .menu__block__desserts__card__titles__subtitle--delice
 {
   @extend .menu__block__desserts__card__titles__subtitle;
-  font-size:100%;
+  font-size:1rem;
 } 
 
 // carte  : bloc titres - Prix : définition marge bas - marge droite //
@@ -503,27 +503,28 @@
   align-items:center;
   align-self:stretch;
   background-color: $color-tertiary;
-  width: 5rem;
-  margin-right: -5rem;
+  width: 5.1rem;
+  margin-right: -5.1rem;
   border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
 
 .card:hover .menu__block__details__card_iconcheck{
  transition:all 0.5s;
+ transform: translateX(0);
  margin-right:0; 
- padding:0; 
 }
+
 // carte  : bloc titres : icône boite verte //
 .menu__block__details__card_iconcheck .fa-circle-check
 {
   color:$normal-white-color;
   font-size:1.4rem;
 }
-.menu__block__details__card:hover .fa-circle-check
+.card:hover .fa-circle-check
 {
-  -webkit-animation: rotate-check 0.6s ease-in-out both;
   animation: rotate-check 0.6s ease-in-out both;
+  -webkit-animation: rotate-check 0.6s ease-in-out both;
 }
 
 //animation carte menu //

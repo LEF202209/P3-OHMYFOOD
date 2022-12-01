@@ -13,7 +13,6 @@
 
 .loader__container::before
   {
-    display: flex;
     content: "";
     position: fixed;
     top:0;
@@ -33,13 +32,11 @@
     justify-content: center;
     position: fixed;
     inset: 0;
-    color:$normal-white-color;
     opacity: 0.8;
     border: 10px solid $color-primary;
-    // background-color: rgb(238, 167, 238);
-    background-color: $color-secondary;
+    background-color:lighten($color-secondary,20%);
     margin:auto;
-    animation: scale-up-center 3s ease-out 0.2s 1 normal none;
+    animation: scale-up-center 3s ease-out;
     animation-fill-mode: forwards;
     z-index:102;
     width: 17rem;
@@ -61,7 +58,7 @@
     
 // animation : spinner - texte //  
     .loader p {
-      background: linear-gradient($color-primary, $color-secondary);
+      background: linear-gradient(to right,$color-primary, $color-secondary);
       font-family: "shrikhand", sans-serif;
       font-weight: 900;
       background-clip: text;
@@ -101,20 +98,19 @@
     {
         width: 88%;
         margin: 0 auto 35px auto;
-        font-size: 165%;
+        font-size: 1.65rem;
+        @include m.tablet
+        {
+            font-size: 2.25rem;
+            margin-bottom: 55px;
+        }
 
-    @include m.tablet
-    {
-        font-size: 36px;
-        margin-bottom: 55px;
-    }
-
-    @include m.desktop
-    {
-        font-size: 45px;
-        margin-bottom: 70px;
-        text-align: center;
-    }
+        @include m.desktop
+        {
+            font-size: 2.813rem;
+            margin-bottom: 70px;
+            text-align: center;
+        }
 }
 }
 .functioning__column__button
@@ -161,7 +157,7 @@
 
     &__icon
     {   
-        font-size: 21px;
+        font-size: 1.313rem;
         color: $color-shadow-dark;
         padding: 0px 31px 0 36px;
         @include m.desktop
@@ -183,12 +179,10 @@
     {   
         display: block;
         @include m.font-size-font-weight(110%,bold);
-        // font-weight: bold;
-        // font-size: 110%;
         width: 108%;
         @include m.desktop
         {
-            font-size: 24px;
+            font-size: 1.5rem;
         }
       
     }
@@ -205,23 +199,22 @@
 
     &__title{
         width:88%;
-        font-size: 165%;
+        font-size: 1.65rem;
         margin:55px auto 25px auto;
         @include m.tablet
         {
-            font-size: 36px;
+            font-size: 2.25rem;
             margin-bottom: 55px;
             margin-top:40px;
         }
 
         @include m.desktop
         {
-            font-size: 45px;
+            font-size: 2.813rem;
             margin-bottom: 70px;
             text-align: center;
         }
     }
-
     &__column
     {
         @include m.flex-flex-direction-align-items(flex,column,center);

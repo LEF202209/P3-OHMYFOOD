@@ -6,8 +6,7 @@
     &__nav
         {
             // @include m.flex-justify-content-flex-direction(flex,flex-start,column);
-            @include m.flex-justify-content-flex-direction-align-items(flex,flex-start,column,flex-start);     
-            // align-items: flex-start;   
+            @include m.flex-justify-content-flex-direction-align-items(flex,flex-start,column,flex-start);       
             padding: 0 7% 22px 7%;
             background-color:$color-bk-footer;
     
@@ -45,7 +44,6 @@
                 {
                     @include m.btn-before("\f4c4",4px);
                 }
-
             }
             a
                 {
@@ -53,7 +51,6 @@
                     margin-bottom: 0;
                     padding: 5px 0 10px 0;
                     font-size: 17.5px;
-
                 &:hover
                     {
                         color:$color-tertiary;
