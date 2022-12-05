@@ -2,7 +2,7 @@
 @use "./../utils/mixins" as m;
 
 .footer
-    {
+    { 
     &__nav
         {
             // @include m.flex-justify-content-flex-direction(flex,flex-start,column);

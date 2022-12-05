@@ -18,5 +18,15 @@ $color-bk-functioning-shadow:lightgrey;
 $color-figure-shadow : silver;
 $normal-blue-color:blue;
 $normal-white-color:#ffffff;
+
 // variables for media queries //
 $breakpoints:( tablet:768px , desktop:992px);
+ 
+//variable for animation_delay card value //
+$animation_delay_card:200ms;
+
+// variable for animation-duration loader value 
+$animation_duration_loader:3s; 
+
+// variable for maximum number of cards value
+$max_number_cards:4;

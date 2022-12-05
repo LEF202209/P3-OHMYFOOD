@@ -507,12 +507,11 @@
   margin-right: -5.1rem;
   border-radius: 0 15px 15px 0;
   cursor: pointer;
+  transition:all 0.5s;
 }
 
 .card:hover .menu__block__details__card_iconcheck{
- transition:all 0.5s;
- transform: translateX(0);
- margin-right:0; 
+  margin-right:0; 
 }
 
 // carte  : bloc titres : icône boite verte //
@@ -520,19 +519,22 @@
 {
   color:$normal-white-color;
   font-size:1.4rem;
+  transform:rotate(0deg);
+  transition: transform 0.6s ease-in-out;
 }
+
 .card:hover .fa-circle-check
 {
-  animation: rotate-check 0.6s ease-in-out both;
-  -webkit-animation: rotate-check 0.6s ease-in-out both;
+  transform:rotate(360deg); 
 }
 
 //animation carte menu //
-@for $i from 2 through 5 {
+@for $i from 2 through $max_number_cards+1 {
  article .card:nth-child(#{$i}) 
- {
-      animation: menu 1s ease-out both 200ms*(($i)-1);
-      -webkit-animation: menu 1s ease-out both 200ms*(($i)-1);
+  {
+      animation: menu 1s ease-out both ($animation_delay_card)*(($i)-1);
+      -webkit-animation: menu 1s ease-out both ($animation_delay_card)*(($i)-1);
   }
 }
 
+ 
