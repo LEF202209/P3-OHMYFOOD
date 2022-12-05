@@ -39,7 +39,7 @@
     animation: scale-up-center $animation_duration_loader ease-in-out;
     animation-fill-mode: forwards;
     z-index:102;
-    width: 17rem;
+    width: 17rem; 
     height: 17rem;
     border-radius: 8.5rem; 
     @include m.tablet
