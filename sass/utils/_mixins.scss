@@ -21,7 +21,7 @@
     font-size: 13px;
     content: $content;
     margin-right:$mrg-right;
-}
+} 
 @mixin color-button($bk-color,$border-width,$border-style,$border-color)
 {
     background-color:$bk-color;
@@ -50,8 +50,8 @@
 }
 @mixin heart-hover
 {
-    transition: all ease 0.8s;
     transform: scale(1); 
+    transition: all ease 0.8s;
 }
 
 // définition hauteur et largeur des blocs //
@@ -200,8 +200,8 @@
 // changement au passage de la souris pour les boutons //
 @mixin button_hover
 {
-    transform:scale(1.1);
-    transition : ease 0.3s;
-    box-shadow: 0px 2px 3px $color-bk-black;
+    transform: scale(1.1) ;
     opacity:0.7;
+    transition : transform linear 0.3s;
+    box-shadow: 0px 2px 3px $color-bk-black;
 }
