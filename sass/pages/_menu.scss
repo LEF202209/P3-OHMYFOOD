@@ -277,7 +277,7 @@
   box-shadow: 0px 4px 15px $color-bk-functioning-shadow;
   overflow:hidden;
   padding:0 0 0 14px;
-  animation: menu both 0.6s;
+  // animation: menu both 0.6s;
   @include m.margin-bottom-init(11px);
   &__d1
   {

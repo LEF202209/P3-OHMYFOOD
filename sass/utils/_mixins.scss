@@ -200,8 +200,6 @@
 // changement au passage de la souris pour les boutons //
 @mixin button_hover
 {
-    transform: scale(1.1) ;
-    opacity:0.7;
-    transition : transform linear 0.3s;
+    background-image: linear-gradient($color-primary,$color-secondary);
     box-shadow: 0px 2px 3px $color-bk-black;
 }

@@ -42,6 +42,7 @@
     width: 17rem; 
     height: 17rem;
     border-radius: 8.5rem; 
+    overflow:hidden;
     @include m.tablet
     {
       width: 25rem;
@@ -64,7 +65,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: loader forwards $animation_duration_loader;
+      animation: rotate_p forwards $animation_duration_loader;
       z-index:103;
     }
   // Fin loader spinner //
