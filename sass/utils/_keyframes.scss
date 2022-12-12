@@ -2,7 +2,7 @@
 @use "../utils/mixins" as m;
 
 
-// effet sombre background pour le spinner //
+// effet disparition background sombre pour le spinner //
 @keyframes loader_background {
     
   0% {
@@ -13,7 +13,7 @@
   }
 }
 
-// effet agrandissement background pour le spinner //
+// agrandissement / diminution cercle pour le spinner //
 @keyframes scale-up-center {
     
   0% {
@@ -27,8 +27,7 @@
   }
 }
 
-
-// spinner et apparition OhMyFood //
+// apparition OhMyFood & spinner //
 @keyframes rotate_p {
   0% {
     letter-spacing: 0;
@@ -40,7 +39,7 @@
     transform: rotate(720deg);
   }
   100% {
-    transform: scale(0);
+    // transform: scale(0);
     transform: rotate(0);
     font-size: 0;
   }
