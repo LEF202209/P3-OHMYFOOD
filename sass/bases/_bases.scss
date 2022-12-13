@@ -32,6 +32,11 @@ a
         color:$color-bk-black;
     }
 
+    // bug débordement site //
+h2 {
+    max-width:100%;
+}
+
     input::placeholder {
         color: $color-search-input;
         @include m.font-size-font-weight(17px,bold);

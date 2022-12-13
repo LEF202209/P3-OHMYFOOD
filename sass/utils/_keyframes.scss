@@ -2,7 +2,7 @@
 @use "../utils/mixins" as m;
 
 
-// effet disparition background sombre pour le spinner //
+// disparition background sombre après animation //
 @keyframes loader_background {
     
   0% {
@@ -39,7 +39,6 @@
     transform: rotate(720deg);
   }
   100% {
-    // transform: scale(0);
     transform: rotate(0);
     font-size: 0;
   }
